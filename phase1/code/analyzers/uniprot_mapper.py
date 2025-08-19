@@ -26,10 +26,10 @@ class UniProtMapper:
         self.logger = logging.getLogger(__name__)
         
         # Mapping caches (loaded lazily)
-        self.uniprot_to_gene = {}
-        self.uniprot_to_ensembl = {}
-        self.gene_to_uniprot = {}
-        self.ensembl_to_uniprot = {}
+        self.uniprot_to_gene_dict = {}
+        self.uniprot_to_ensembl_dict = {}
+        self.gene_to_uniprot_dict = {}
+        self.ensembl_to_uniprot_dict = {}
         
         # Load status
         self.mappings_loaded = False
@@ -60,17 +60,17 @@ class UniProtMapper:
                     
                     # Map to gene names
                     if db_type == 'Gene_Name':
-                        self.uniprot_to_gene[uniprot_id] = db_id
-                        self.gene_to_uniprot[db_id] = uniprot_id
-                    
+                        self.uniprot_to_gene_dict[uniprot_id] = db_id
+                        self.gene_to_uniprot_dict[db_id] = uniprot_id
+
                     # Map to Ensembl gene IDs
                     elif db_type == 'Ensembl':
-                        self.uniprot_to_ensembl[uniprot_id] = db_id
-                        self.ensembl_to_uniprot[db_id] = uniprot_id
+                        self.uniprot_to_ensembl_dict[uniprot_id] = db_id
+                        self.ensembl_to_uniprot_dict[db_id] = uniprot_id
             
             self.mappings_loaded = True
-            self.logger.info(f"✅ Loaded {len(self.uniprot_to_gene):,} UniProt→Gene mappings")
-            self.logger.info(f"✅ Loaded {len(self.uniprot_to_ensembl):,} UniProt→Ensembl mappings")
+            self.logger.info(f"✅ Loaded {len(self.uniprot_to_gene_dict):,} UniProt→Gene mappings")
+            self.logger.info(f"✅ Loaded {len(self.uniprot_to_ensembl_dict):,} UniProt→Ensembl mappings")
             
         except Exception as e:
             self.logger.error(f"❌ Failed to load UniProt mappings: {e}")
@@ -79,19 +79,19 @@ class UniProtMapper:
         """Convert UniProt ID to gene name"""
         
         self._load_uniprot_mappings()
-        return self.uniprot_to_gene.get(uniprot_id)
-    
+        return self.uniprot_to_gene_dict.get(uniprot_id)
+
     def gene_name_to_uniprot(self, gene_name: str) -> Optional[str]:
         """Convert gene name to UniProt ID"""
-        
+
         self._load_uniprot_mappings()
-        return self.gene_to_uniprot.get(gene_name)
-    
+        return self.gene_to_uniprot_dict.get(gene_name)
+
     def uniprot_to_ensembl(self, uniprot_id: str) -> Optional[str]:
         """Convert UniProt ID to Ensembl gene ID"""
-        
+
         self._load_uniprot_mappings()
-        return self.uniprot_to_ensembl.get(uniprot_id)
+        return self.uniprot_to_ensembl_dict.get(uniprot_id)
     
     def get_genomic_coordinates(self, uniprot_id: str, protein_position: int) -> Optional[Dict]:
         """
@@ -105,6 +105,10 @@ class UniProtMapper:
         if not ensembl_gene:
             self.logger.warning(f"⚠️ No Ensembl mapping for UniProt {uniprot_id}")
             return None
+
+        # Remove version number from Ensembl ID (e.g., ENSG00000141510.19 → ENSG00000141510)
+        if '.' in ensembl_gene:
+            ensembl_gene = ensembl_gene.split('.')[0]
         
         # Step 2: Use Ensembl REST API to get genomic coordinates
         try:
@@ -208,8 +212,8 @@ class UniProtMapper:
         self._load_uniprot_mappings()
         
         return {
-            'uniprot_to_gene_count': len(self.uniprot_to_gene),
-            'uniprot_to_ensembl_count': len(self.uniprot_to_ensembl),
+            'uniprot_to_gene_count': len(self.uniprot_to_gene_dict),
+            'uniprot_to_ensembl_count': len(self.uniprot_to_ensembl_dict),
             'mappings_loaded': self.mappings_loaded,
             'mapping_file_exists': self.mapping_file.exists(),
             'mapping_file_size_mb': self.mapping_file.stat().st_size / (1024*1024) if self.mapping_file.exists() else 0
