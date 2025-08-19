@@ -13,8 +13,9 @@ import re
 class DNAnalyzer:
     """Analyze dominant negative potential - Bin 2 of our two-bin approach"""
     
-    def __init__(self):
+    def __init__(self, offline_mode=False):
         self.name = "DNAnalyzer"
+        self.offline_mode = offline_mode
         
         # Protein family patterns for DN mechanisms
         self.dn_patterns = {

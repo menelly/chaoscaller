@@ -17,16 +17,20 @@ import logging
 class SmartProteinAnalyzer:
     """Automatically pull domain/function info and adjust scoring - scales to ALL proteins!"""
     
-    def __init__(self):
+    def __init__(self, offline_mode=False):
         self.name = "SmartProteinAnalyzer"
-        
+        self.offline_mode = offline_mode  # Skip API calls for testing
+
         # Cache to avoid repeated API calls
         self.uniprot_cache = {}
         self.pfam_cache = {}
         self.go_cache = {}
-        
+
         # Set up logging
         self.logger = logging.getLogger(__name__)
+
+        if self.offline_mode:
+            self.logger.info("🔧 OFFLINE MODE: Skipping UniProt API calls, using local motifs only")
         
         # Domain/function scoring weights (evidence-based, not hardcoded genes!)
         self.pfam_weights = {
@@ -97,20 +101,23 @@ class SmartProteinAnalyzer:
         evidence_sources = []
         
         try:
-            # Source 1: Pfam domains (most reliable)
-            pfam_multiplier, pfam_conf = self._get_pfam_multiplier(uniprot_id)
-            if pfam_multiplier > 1.0:
-                multiplier *= pfam_multiplier
-                confidence += pfam_conf
-                evidence_sources.append(f"Pfam:{pfam_multiplier:.2f}")
-            
-            # Source 2: GO terms (functional context)
-            go_multiplier, go_conf = self._get_go_multiplier(uniprot_id)
-            if go_multiplier > 1.0:
-                multiplier *= go_multiplier
-                confidence += go_conf
-                evidence_sources.append(f"GO:{go_multiplier:.2f}")
-            
+            if not self.offline_mode:
+                # Source 1: Pfam domains (most reliable)
+                pfam_multiplier, pfam_conf = self._get_pfam_multiplier(uniprot_id)
+                if pfam_multiplier > 1.0:
+                    multiplier *= pfam_multiplier
+                    confidence += pfam_conf
+                    evidence_sources.append(f"Pfam:{pfam_multiplier:.2f}")
+
+                # Source 2: GO terms (functional context)
+                go_multiplier, go_conf = self._get_go_multiplier(uniprot_id)
+                if go_multiplier > 1.0:
+                    multiplier *= go_multiplier
+                    confidence += go_conf
+                    evidence_sources.append(f"GO:{go_multiplier:.2f}")
+            else:
+                self.logger.debug("🔧 Skipping API calls in offline mode")
+
             # Source 3: Sequence motifs (works offline!)
             motif_multiplier, motif_conf = self._get_motif_multiplier(sequence, position)
             if motif_multiplier > 1.0:

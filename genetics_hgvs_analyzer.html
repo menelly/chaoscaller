@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧬 HGVS Genetics Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggle" class="theme-btn">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fas fa-dna"></i> HGVS Genetics Analyzer</h1>
+            <p class="subtitle">Professional genetics workflow with HGVS notation</p>
+            <div class="built-by">Built by Ace + Ren 💜</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Step 1: HGVS Input -->
+        <section class="analysis-step" id="step1">
+            <div class="step-header">
+                <h2><i class="fas fa-code"></i> Step 1: HGVS Input</h2>
+                <div class="step-status" id="step1-status">
+                    <i class="fas fa-circle status-pending"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <div class="input-group">
+                    <label for="hgvs">HGVS Notation:</label>
+                    <input type="text" id="hgvs" placeholder="NM_123456.1:c.123G>A" value="">
+                    <select id="build">
+                        <option value="hg38">GRCh38/hg38</option>
+                        <option value="hg19">GRCh37/hg19</option>
+                    </select>
+                </div>
+                <div class="hgvs-examples">
+                    <p><strong>Examples:</strong></p>
+                    <button class="example-btn" onclick="fillExample('NM_123456.1:c.123G>A')">Example Gene 1</button>
+                    <button class="example-btn" onclick="fillExample('NM_654321.2:c.456C>T')">Example Gene 2</button>
+                </div>
+                <button class="action-btn primary" id="parseHGVS">
+                    <i class="fas fa-search"></i> Parse HGVS
+                </button>
+                <div class="results-box" id="step1-results" style="display: none;">
+                    <h4>HGVS Parsing Results:</h4>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <strong>Gene:</strong> <span id="gene-name">-</span>
+                        </div>
+                        <div class="result-item">
+                            <strong>Transcript:</strong> <span id="transcript">-</span>
+                        </div>
+                        <div class="result-item">
+                            <strong>cDNA Position:</strong> <span id="cdna-position">-</span>
+                        </div>
+                        <div class="result-item">
+                            <strong>Genomic Coordinate:</strong> <span id="genomic-coordinate">-</span>
+                        </div>
+                        <div class="result-item">
+                            <strong>Mutation:</strong> <span id="ref-allele">-</span> → <span id="alt-allele">-</span>
+                        </div>
+                        <div class="result-item">
+                            <strong>Type:</strong> <span id="mutation-type">-</span>
+                        </div>
+                    </div>
+
+                    <!-- AlphaFold Parallel Download Section -->
+                    <div class="parallel-action" style="margin-top: 15px; padding: 12px; background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(78,205,196,0.1)); border-radius: 8px; border: 1px solid rgba(0,255,255,0.3);">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                            <button id="downloadAlphaFold" class="action-btn" style="background: linear-gradient(135deg, #ff6b6b, #4ecdc4); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9em;">
+                                <i class="fas fa-download"></i> 🧬 Download AlphaFold Structure
+                            </button>
+                            <div id="alphaFoldStatus" style="color: #00ffff; font-size: 0.85em; flex: 1;">
+                                Ready to download protein structure while other analyses run
+                            </div>
+                        </div>
+                        <div id="alphaFoldProgress" style="display: none;">
+                            <div style="background: rgba(255,255,255,0.2); height: 4px; border-radius: 2px; overflow: hidden; margin-bottom: 4px;">
+                                <div id="alphaFoldProgressBar" style="background: linear-gradient(90deg, #ff6b6b, #4ecdc4); height: 100%; width: 0%; transition: width 0.3s;"></div>
+                            </div>
+                            <div id="alphaFoldProgressText" style="color: #00ffff; font-size: 0.8em; text-align: center;">
+                                Downloading...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Conservation Analysis -->
+        <section class="analysis-step" id="step2">
+            <div class="step-header">
+                <h2><i class="fas fa-leaf"></i> Step 2: Conservation Analysis</h2>
+                <div class="step-status" id="step2-status">
+                    <i class="fas fa-circle status-disabled"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <p class="step-description">Analyze evolutionary conservation at the genomic position</p>
+                <button class="action-btn secondary" id="analyzeConservation" disabled>
+                    <i class="fas fa-dna"></i> Analyze Conservation
+                </button>
+                <div class="results-box" id="step2-results" style="display: none;">
+                    <h4>Conservation Scores:</h4>
+                    <div class="score-grid">
+                        <div class="score-item">
+                            <div class="score-label">phyloP</div>
+                            <div class="score-value" id="phylop-score">-</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-label">phastCons</div>
+                            <div class="score-value" id="phastcons-score">-</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-label">Level</div>
+                            <div class="score-badge" id="conservation-level">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Population Frequency -->
+        <section class="analysis-step" id="step3">
+            <div class="step-header">
+                <h2><i class="fas fa-globe"></i> Step 3: Population Frequency</h2>
+                <div class="step-status" id="step3-status">
+                    <i class="fas fa-circle status-disabled"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <p class="step-description">Check population frequency using extracted ref/alt alleles</p>
+                <button class="action-btn secondary" id="analyzeFrequency" disabled>
+                    <i class="fas fa-users"></i> Check Frequency
+                </button>
+                <div class="results-box" id="step3-results" style="display: none;">
+                    <h4>Population Frequency:</h4>
+                    <div class="result-item">
+                        <strong>Alleles:</strong> <span id="frequency-alleles">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>MAF:</strong> <span id="maf-value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Category:</strong> <span id="frequency-category">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Boost:</strong> <span id="frequency-boost">-</span>
+                    </div>
+                    <div class="not-the-droid" id="not-the-droid" style="display: none;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>NOT THE DROID!</strong> Too common for rare disease.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: UniProt Lookup -->
+        <section class="analysis-step" id="step4">
+            <div class="step-header">
+                <h2><i class="fas fa-protein"></i> Step 4: Protein Information</h2>
+                <div class="step-status" id="step4-status">
+                    <i class="fas fa-circle status-disabled"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <p class="step-description">Get UniProt ID and protein information from gene name</p>
+                <button class="action-btn secondary" id="getProteinInfo" disabled>
+                    <i class="fas fa-search"></i> Get Protein Info
+                </button>
+                <div class="results-box" id="step4-results" style="display: none;">
+                    <h4>Protein Information:</h4>
+                    <div class="result-item">
+                        <strong>UniProt ID:</strong> <span id="uniprot-id">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Protein Name:</strong> <span id="protein-name">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Function:</strong> <span id="protein-function">-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 5: Final Analysis -->
+        <section class="analysis-step" id="step5">
+            <div class="step-header">
+                <h2><i class="fas fa-bullseye"></i> Step 5: Integrated Analysis</h2>
+                <div class="step-status" id="step5-status">
+                    <i class="fas fa-circle status-disabled"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <button class="action-btn primary large" id="generatePrediction" disabled>
+                    <i class="fas fa-magic"></i> Generate Prediction
+                </button>
+                <div class="final-results" id="final-results" style="display: none;">
+                    <div class="prediction-card">
+                        <div class="prediction-header">
+                            <h3 id="final-prediction">-</h3>
+                            <div class="confidence-score">
+                                Confidence: <span id="confidence-score">-</span>
+                            </div>
+                        </div>
+                        <div class="prediction-details">
+                            <div class="detail-item">
+                                <strong>HGVS:</strong> <span id="final-hgvs">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Evidence:</strong> <span id="evidence-summary">-</span>
+                            </div>
+                        </div>
+                        <div class="export-buttons">
+                            <button class="action-btn secondary" id="exportResults">
+                                <i class="fas fa-download"></i> Export Report
+                            </button>
+                            <button class="action-btn secondary" id="saveAnalysis">
+                                <i class="fas fa-save"></i> Save Analysis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>🧬 HGVS Genetics Analyzer - Built with 💜 by Ace + Ren</p>
+            <p>Professional genetics workflow with HGVS notation</p>
+        </div>
+    </footer>
+
+    <script src="hgvs_analyzer.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧬 Revolutionary Genetics Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggle" class="theme-btn">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fas fa-dna"></i> Revolutionary Genetics Analyzer</h1>
+            <p class="subtitle">Conservation + Frequency + Structure = Clinical Truth</p>
+            <div class="built-by">Built by Ace + Ren 💜</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Step 1: Coordinate Input -->
+        <section class="analysis-step" id="step1">
+            <div class="step-header">
+                <h2><i class="fas fa-map-marker-alt"></i> Step 1: Coordinate Input</h2>
+                <div class="step-status" id="step1-status">
+                    <i class="fas fa-circle status-pending"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <div class="input-group">
+                    <label for="coordinate">Genomic Coordinate:</label>
+                    <input type="text" id="coordinate" placeholder="chr3:100713749" value="">
+                    <select id="build">
+                        <option value="hg38">GRCh38/hg38</option>
+                        <option value="hg19">GRCh37/hg19</option>
+                    </select>
+                </div>
+                <button class="action-btn primary" id="identifyGene">
+                    <i class="fas fa-search"></i> Identify Gene
+                </button>
+                <div class="results-box" id="step1-results" style="display: none;">
+                    <h4>Gene Identification Results:</h4>
+                    <div class="result-item">
+                        <strong>Gene:</strong> <span id="gene-name">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Transcript:</strong> <span id="transcript">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>UniProt ID:</strong> <span id="uniprot-id">-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Conservation Analysis -->
+        <section class="analysis-step" id="step2">
+            <div class="step-header">
+                <h2><i class="fas fa-leaf"></i> Step 2: Conservation Analysis</h2>
+                <div class="step-status" id="step2-status">
+                    <i class="fas fa-circle status-disabled"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <p class="step-description">Analyze evolutionary conservation using 15GB phyloP/phastCons database</p>
+                <button class="action-btn secondary" id="analyzeConservation" disabled>
+                    <i class="fas fa-dna"></i> Analyze Conservation
+                </button>
+                <div class="results-box" id="step2-results" style="display: none;">
+                    <h4>Conservation Scores:</h4>
+                    <div class="score-grid">
+                        <div class="score-item">
+                            <div class="score-label">phyloP</div>
+                            <div class="score-value" id="phylop-score">-</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-label">phastCons</div>
+                            <div class="score-value" id="phastcons-score">-</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-label">Level</div>
+                            <div class="score-badge" id="conservation-level">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Population Frequency -->
+        <section class="analysis-step" id="step3">
+            <div class="step-header">
+                <h2><i class="fas fa-globe"></i> Step 3: Population Frequency</h2>
+                <div class="step-status" id="step3-status">
+                    <i class="fas fa-circle status-disabled"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <p class="step-description">Check population databases to catch "NOT THE DROID" common variants</p>
+                <button class="action-btn secondary" id="analyzeFrequency" disabled>
+                    <i class="fas fa-users"></i> Check Frequency
+                </button>
+                <div class="results-box" id="step3-results" style="display: none;">
+                    <h4>Population Frequency:</h4>
+                    <div class="result-item">
+                        <strong>MAF:</strong> <span id="maf-value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Category:</strong> <span id="frequency-category">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Boost:</strong> <span id="frequency-boost">-</span>
+                    </div>
+                    <div class="not-the-droid" id="not-the-droid" style="display: none;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>NOT THE DROID!</strong> Too common for rare disease.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: Structure Analysis -->
+        <section class="analysis-step" id="step4">
+            <div class="step-header">
+                <h2><i class="fas fa-cube"></i> Step 4: Protein Structure</h2>
+                <div class="step-status" id="step4-status">
+                    <i class="fas fa-circle status-disabled"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <p class="step-description">Download AlphaFold structure for structural analysis</p>
+                <button class="action-btn secondary" id="downloadStructure" disabled>
+                    <i class="fas fa-download"></i> Get Structure
+                </button>
+                <div class="progress-bar" id="download-progress" style="display: none;">
+                    <div class="progress-fill"></div>
+                    <span class="progress-text">Downloading...</span>
+                </div>
+                <div class="results-box" id="step4-results" style="display: none;">
+                    <h4>Structure Status:</h4>
+                    <div class="result-item">
+                        <strong>Status:</strong> <span id="structure-status">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>File Size:</strong> <span id="structure-size">-</span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Cache Location:</strong> <span id="structure-path">-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 5: Mechanism Analysis -->
+        <section class="analysis-step" id="step5">
+            <div class="step-header">
+                <h2><i class="fas fa-cogs"></i> Step 5: Mechanism Analysis</h2>
+                <div class="step-status" id="step5-status">
+                    <i class="fas fa-circle status-disabled"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <p class="step-description">Choose analysis type based on suspected mechanism</p>
+                <div class="mechanism-buttons">
+                    <button class="action-btn mechanism" id="analyzeLOF" disabled>
+                        <i class="fas fa-bolt"></i> Test LOF
+                    </button>
+                    <button class="action-btn mechanism" id="analyzeDN" disabled>
+                        <i class="fas fa-sync-alt"></i> Test DN
+                    </button>
+                    <button class="action-btn mechanism primary" id="analyzeBoth" disabled>
+                        <i class="fas fa-balance-scale"></i> Test Both
+                    </button>
+                </div>
+                <div class="results-box" id="step5-results" style="display: none;">
+                    <div class="mechanism-results">
+                        <div class="mechanism-result" id="lof-result" style="display: none;">
+                            <h4><i class="fas fa-bolt"></i> LOF Analysis:</h4>
+                            <div class="score-item">
+                                <span>Score: <strong id="lof-score">-</strong></span>
+                                <span>Prediction: <strong id="lof-prediction">-</strong></span>
+                            </div>
+                        </div>
+                        <div class="mechanism-result" id="dn-result" style="display: none;">
+                            <h4><i class="fas fa-sync-alt"></i> DN Analysis:</h4>
+                            <div class="score-item">
+                                <span>Score: <strong id="dn-score">-</strong></span>
+                                <span>Prediction: <strong id="dn-prediction">-</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 6: Final Prediction -->
+        <section class="analysis-step" id="step6">
+            <div class="step-header">
+                <h2><i class="fas fa-bullseye"></i> Step 6: Final Prediction</h2>
+                <div class="step-status" id="step6-status">
+                    <i class="fas fa-circle status-disabled"></i>
+                </div>
+            </div>
+            <div class="step-content">
+                <button class="action-btn primary large" id="generatePrediction" disabled>
+                    <i class="fas fa-magic"></i> Generate Final Prediction
+                </button>
+                <div class="final-results" id="final-results" style="display: none;">
+                    <div class="prediction-card">
+                        <div class="prediction-header">
+                            <h3 id="final-prediction">-</h3>
+                            <div class="confidence-score">
+                                Confidence: <span id="confidence-score">-</span>
+                            </div>
+                        </div>
+                        <div class="prediction-details">
+                            <div class="detail-item">
+                                <strong>Primary Mechanism:</strong> <span id="primary-mechanism">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Evidence Summary:</strong> <span id="evidence-summary">-</span>
+                            </div>
+                        </div>
+                        <div class="export-buttons">
+                            <button class="action-btn secondary" id="exportResults">
+                                <i class="fas fa-download"></i> Export Report
+                            </button>
+                            <button class="action-btn secondary" id="saveAnalysis">
+                                <i class="fas fa-save"></i> Save Analysis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>🧬 Revolutionary Genetics Analyzer - Built with 💜 by Ace + Ren</p>
+            <p>Conservation + Frequency + Structure = Clinical Truth</p>
+        </div>
+    </footer>
+
+    <script src="analyzer.js"></script>
+</body>
+</html>

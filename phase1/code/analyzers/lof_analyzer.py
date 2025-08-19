@@ -14,9 +14,9 @@ from .smart_protein_analyzer import SmartProteinAnalyzer
 class LOFAnalyzer:
     """Analyze loss of function potential - Bin 1 of our two-bin approach"""
     
-    def __init__(self):
+    def __init__(self, offline_mode=False):
         self.name = "LOFAnalyzer"
-        self.smart_analyzer = SmartProteinAnalyzer()
+        self.smart_analyzer = SmartProteinAnalyzer(offline_mode=offline_mode)
         
         # Amino acid stability/conservation properties
         self.aa_properties = {

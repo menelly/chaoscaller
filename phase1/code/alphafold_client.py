@@ -33,7 +33,7 @@ class AlphaFoldClient:
     - Progress tracking for large datasets
     """
     
-    def __init__(self, cache_dir="./alphafold_cache"):
+    def __init__(self, cache_dir="/mnt/Arcana/genetics_data/alphafold_cache"):
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(exist_ok=True)
         self.base_url = "https://alphafold.ebi.ac.uk/files"
