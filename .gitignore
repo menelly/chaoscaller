@@ -1,0 +1,107 @@
+# 🔒 PROTECT SENSITIVE GENETIC DATA AND LARGE FILES
+
+# ===== PERSONAL GENETIC DATA (NEVER COMMIT!) =====
+*.csv
+*chaos*.csv
+*variant*.csv
+*genetic*.csv
+Ren*.csv
+*personal*.csv
+
+# ===== LARGE CONSERVATION DATABASES =====
+conservation_data/
+*.bw
+*.bigWig
+*.dat.gz
+*.vcf.gz
+*.fasta.gz
+*.fa.gz
+
+# ===== PROTEIN STRUCTURE CACHE =====
+alphafold_cache/
+*.pdb
+*.cif
+structures/
+
+# ===== PYTHON ENVIRONMENT =====
+genetics_env/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===== IDE AND EDITOR FILES =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===== LOGS AND TEMPORARY FILES =====
+*.log
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===== API KEYS AND SECRETS =====
+.env
+.env.local
+.env.production
+secrets.json
+config.json
+api_keys.txt
+
+# ===== SYSTEM FILES =====
+.directory
+desktop.ini
+
+# ===== BACKUP FILES =====
+*.bak
+*.backup
+*.old
+
+# ===== LARGE MODEL FILES =====
+*.bin
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.h5
+*.pb
+*.onnx
+*.tflite
+*.model
+
+# ===== SPECIFIC TO OUR PROJECT =====
+# Keep the code, docs, and small config files
+# Ignore everything else that's large or sensitive
+
+# Allow these important files:
+!README.md
+!ARCHITECTURE.md
+!*.py
+!requirements.txt
+!setup.py
