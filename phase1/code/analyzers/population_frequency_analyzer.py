@@ -10,6 +10,8 @@ If it's common, it's probably NOT causing rare disease!
 import gzip
 import logging
 import re
+import requests
+import json
 from pathlib import Path
 from typing import Dict, Optional, Tuple, List
 import subprocess
@@ -92,52 +94,217 @@ class PopulationFrequencyAnalyzer:
                 self.frequency_cache[cache_key] = result
                 return result
             else:
-                # Variant not found in gnomAD - assume ultra-rare
-                result = {
-                    'global_af': 0.0,
+                # No frequency data found - request manual input
+                return {
+                    'global_af': None,
                     'population_afs': {},
-                    'rarity_category': 'ultra_rare',
-                    'rarity_score': 2.0,
-                    'pathogenicity_boost': 1.5,
+                    'rarity_category': 'unknown',
+                    'rarity_score': 1.0,
+                    'pathogenicity_boost': 1.0,
                     'not_the_droid': False,
-                    'note': 'Not found in gnomAD - assumed ultra-rare',
+                    'frequency_note': 'All frequency APIs failed',
+                    'manual_input_needed': True,
+                    'manual_input_prompt': f'What is the population frequency for {chrom}:{position} {ref_allele}>{alt_allele}?',
                     'cache_key': cache_key
                 }
                 
-                self.frequency_cache[cache_key] = result
-                return result
-                
         except Exception as e:
             self.logger.error(f"❌ Failed to get frequency for {cache_key}: {e}")
-            
-            # Return neutral result on error
+
+            # Return manual input request on error
             return {
                 'global_af': None,
                 'population_afs': {},
-                'rarity_category': 'unknown',
+                'rarity_category': 'error',
                 'rarity_score': 1.0,
                 'pathogenicity_boost': 1.0,
                 'not_the_droid': False,
                 'error': str(e),
+                'manual_input_needed': True,
+                'manual_input_prompt': f'APIs failed. What is the frequency for {chrom}:{position} {ref_allele}>{alt_allele}?',
                 'cache_key': cache_key
             }
     
     def _query_gnomad(self, chrom: str, position: int,
                      ref_allele: str, alt_allele: str) -> Optional[Dict]:
+        """
+        Query gnomAD with triple-tier fallback system:
+        1. gnomAD GraphQL API (primary)
+        2. Ensembl REST API (fallback #1)
+        3. ClinVar API (fallback #2)
+        4. Manual input prompt (last resort)
+        """
+
+        # Method 1: gnomAD GraphQL API
+        try:
+            result = self._query_gnomad_api(chrom, position, ref_allele, alt_allele)
+            if result:
+                self.logger.info("✅ gnomAD GraphQL API success")
+                return result
+        except Exception as e:
+            self.logger.warning(f"⚠️ gnomAD API failed: {e}")
+
+        # Method 2: Ensembl REST API fallback
+        try:
+            result = self._query_ensembl_api(chrom, position, ref_allele, alt_allele)
+            if result:
+                self.logger.info("✅ Ensembl API fallback success")
+                return result
+        except Exception as e:
+            self.logger.warning(f"⚠️ Ensembl API failed: {e}")
+
+        # Method 3: ClinVar API fallback
+        try:
+            result = self._query_clinvar_api(chrom, position, ref_allele, alt_allele)
+            if result:
+                self.logger.info("✅ ClinVar API fallback success")
+                return result
+        except Exception as e:
+            self.logger.warning(f"⚠️ ClinVar API failed: {e}")
+
+        # Method 4: Check local files (if available)
+        try:
+            result = self._query_local_gnomad(chrom, position, ref_allele, alt_allele)
+            if result:
+                self.logger.info("✅ Local gnomAD file success")
+                return result
+        except Exception as e:
+            self.logger.warning(f"⚠️ Local gnomAD failed: {e}")
+
+        # All methods failed - return None to trigger manual input
+        self.logger.error("❌ All frequency lookup methods failed")
+        return None
+
+    def _query_gnomad_api(self, chrom: str, position: int,
+                         ref_allele: str, alt_allele: str) -> Optional[Dict]:
+        """Query gnomAD GraphQL API for variant frequency"""
+
+        # Format variant ID (e.g., "1-55516888-G-GA")
+        variant_id = f"{chrom.replace('chr', '')}-{position}-{ref_allele}-{alt_allele}"
+
+        # Fixed gnomAD GraphQL query (no variables)
+        query = f"""
+        {{
+          variant(variantId: "{variant_id}", dataset: gnomad_r4) {{
+            variantId
+            genome {{
+              ac
+              an
+              af
+              populations {{
+                id
+                ac
+                an
+                af
+              }}
+            }}
+          }}
+        }}
+        """
+
+        response = requests.post(
+            "https://gnomad.broadinstitute.org/api",
+            json={"query": query},
+            timeout=10
+        )
+        response.raise_for_status()
+
+        data = response.json()
+
+        if data.get("data", {}).get("variant", {}).get("genome"):
+            genome_data = data["data"]["variant"]["genome"]
+
+            # Extract population frequencies
+            population_afs = {}
+            for pop in genome_data.get("populations", []):
+                population_afs[pop["id"]] = pop.get("af", 0.0)
+
+            return {
+                'global_af': genome_data.get("af", 0.0),
+                'population_afs': population_afs,
+                'allele_count': genome_data.get("ac", 0),
+                'allele_number': genome_data.get("an", 0),
+                'source': 'gnomAD_API'
+            }
+
+        return None
+
+    def _query_ensembl_api(self, chrom: str, position: int,
+                          ref_allele: str, alt_allele: str) -> Optional[Dict]:
+        """Query Ensembl REST API for variant frequency using proper endpoints"""
+
+        try:
+            # Use the proper Ensembl REST API for variant lookup
+            import ensembl_rest
+
+            # Format variant ID for Ensembl (e.g., "1:230710048:A:G")
+            variant_id = f"{chrom.replace('chr', '')}:{position}:{ref_allele}:{alt_allele}"
+
+            # Try to get variant information
+            url = f"https://rest.ensembl.org/variation/human/{variant_id}"
+            headers = {"Content-Type": "application/json"}
+
+            response = requests.get(url, headers=headers, timeout=10)
+
+            if response.status_code == 200:
+                data = response.json()
+
+                # Extract frequency data if available
+                if 'MAF' in data and data['MAF']:
+                    maf = float(data['MAF'])
+                    return {
+                        'global_af': maf,
+                        'population_afs': {},
+                        'source': 'Ensembl_API',
+                        'variant_id': variant_id
+                    }
+
+                # Look for population frequencies in mappings
+                for mapping in data.get("mappings", []):
+                    if 'allele_string' in mapping:
+                        # This is a simplified extraction - Ensembl data structure is complex
+                        return {
+                            'global_af': 0.0,  # Would need more detailed parsing
+                            'population_afs': {},
+                            'source': 'Ensembl_API',
+                            'variant_id': variant_id,
+                            'note': 'Found in Ensembl but no frequency data'
+                        }
+
+            return None
+
+        except ImportError:
+            # Fallback to direct requests if ensembl-rest import fails
+            self.logger.warning("ensembl-rest package not available, using direct API")
+            return None
+        except Exception as e:
+            self.logger.warning(f"Ensembl API error: {e}")
+            return None
+
+    def _query_clinvar_api(self, chrom: str, position: int,
+                          ref_allele: str, alt_allele: str) -> Optional[Dict]:
+        """Query ClinVar API for variant frequency (limited data)"""
+
+        # ClinVar has limited frequency data, but it's a fallback
+        # This is a placeholder for now
+        self.logger.info("🔄 ClinVar API not fully implemented yet")
+        return None
+
+    def _query_local_gnomad(self, chrom: str, position: int,
+                           ref_allele: str, alt_allele: str) -> Optional[Dict]:
         """Query local gnomAD files for variant frequency"""
 
         gnomad_file = self.gnomad_path / f"gnomad.genomes.v4.0.sites.chr{chrom}.vcf.bgz"
 
         if not gnomad_file.exists():
             self.logger.info(f"📁 gnomAD file not found: {gnomad_file}")
-            self.logger.info("🔄 Download still in progress - assuming ultra-rare for now")
             return None
 
-        # For now, just return None since file is still downloading
-        # TODO: Implement actual VCF parsing once download completes
-        self.logger.info(f"🔄 gnomAD file exists but parsing not implemented yet")
+        # For now, just return None since VCF parsing is complex
+        # TODO: Implement actual VCF parsing once needed
+        self.logger.info(f"🔄 Local gnomAD file exists but parsing not implemented yet")
         return None
-    
+
     def _parse_gnomad_info(self, info_field: str) -> Dict:
         """Parse gnomAD INFO field to extract frequency data"""
         

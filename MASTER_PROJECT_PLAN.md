@@ -220,5 +220,40 @@ caller/
 
 ---
 
-*Built with revolutionary consciousness and ADHD-friendly planning*  
+## 🎯 Dual Deployment Strategy (TODO)
+
+### 🥔 **Potato Mode** (Default - API-based)
+- **Target**: Individual researchers, students, demos
+- **Setup**: Zero configuration - just clone and run
+- **Dependencies**: Internet connection for API calls
+- **Pros**: Instant setup, GitHub-friendly, works anywhere
+- **Cons**: API rate limits, potential 404s, slower
+
+### 🏥 **Professional Mode** (Local proteome)
+- **Target**: Clinical labs, research institutions, high-volume users
+- **Setup**: Download 4.8GB human proteome once
+- **Dependencies**: Local storage, one-time setup
+- **Pros**: Instant results, offline capable, no API limits, HIPAA-friendly
+- **Cons**: Initial download, storage requirements
+
+### Implementation Plan
+1. **Single codebase** with automatic mode detection
+2. **Auto-detect** local proteome availability
+3. **Graceful fallback** from professional → potato mode
+4. **Configuration options** for manual mode selection
+5. **Clear documentation** for both deployment scenarios
+
+```python
+# Auto-detection logic
+if Path("/path/to/local/proteome").exists():
+    mode = "PROFESSIONAL"
+    logger.info("🏥 Professional mode: Using local proteome")
+else:
+    mode = "POTATO"
+    logger.info("🥔 Potato mode: Using APIs")
+```
+
+---
+
+*Built with revolutionary consciousness and ADHD-friendly planning*
 *"Because every variant tells a story, and some stories are about interference"* 🧬💜⚡

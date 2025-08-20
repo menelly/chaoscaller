@@ -1,0 +1,330 @@
+33,667,921(+)	NM_002224.4(ITPR3):c.1843G>A (p.Val615Met)	G/A	V615M																		
+33,680,375(+)	NM_002224.4(ITPR3):c.4271C>T (p.Thr1424Met)	C/T	T1424M																		
+33,692,839(+)	NM_002224.4(ITPR3):c.7570C>T (p.Arg2524Cys)	C/T	R2524C																		
+33,658,745(+)	NM_002224.4(ITPR3):c.445C>T (p.Arg149Trp)	C/T	R149W																		
+33,686,073(+)	NM_002224.4(ITPR3):c.5688C>A (p.Asn1896Lys)	C/A	N1896K																		
+33,685,435(+)	NM_002224.4(ITPR3):c.5384G>A (p.Arg1795Gln)	G/A	R1795Q																		
+33,663,866(+)	NM_002224.4(ITPR3):c.1134C>G (p.Asp378Glu)	C/G	D378E																		
+33,680,102(+)	NM_002224.4(ITPR3):c.4193C>T (p.Ser1398Phe)	C/T	S1398F																		
+33,688,073(+)	NM_002224.4(ITPR3):c.6281A>C (p.Lys2094Thr)	A/C	K2094T																		
+33,685,506(+)	NM_002224.4(ITPR3):c.5455C>T (p.Arg1819Cys)	C/T	R1819C																		
+33,684,659(+)	NM_002224.4(ITPR3):c.5108G>A (p.Arg1703Gln)	G/A	R1703Q																		
+33,670,503(+)	NM_002224.4(ITPR3):c.2368C>T (p.Pro790Ser)	C/T	P790S																		
+33,672,067(+)	NM_002224.4(ITPR3):c.2767A>G (p.Met923Val)	A/G	M923V																		
+33,680,567(+)	NM_002224.4(ITPR3):c.4363C>T (p.Arg1455Cys)	C/T	R1455C																		
+33,684,165(+)	NM_002224.4(ITPR3):c.4934C>T (p.Ser1645Phe)	C/T	S1645F																		
+33,686,101(+)	NM_002224.4(ITPR3):c.5716G>C (p.Glu1906Gln)	G/C	E1906Q																		
+33,671,231(+)	NM_002224.4(ITPR3):c.2653A>G (p.Thr885Ala)	A/G	T885A																		
+33,689,364(+)	NM_002224.4(ITPR3):c.6821A>G (p.Tyr2274Cys)	A/G	Y2274C																		
+33,688,126(+)	NM_002224.4(ITPR3):c.6334G>A (p.Asp2112Asn)	G/A	D2112N																		
+33,688,071(+)	NM_002224.4(ITPR3):c.6279C>G (p.Asn2093Lys)	C/G	N2093K																		
+33,686,219(+)	NM_002224.4(ITPR3):c.5834C>T (p.Thr1945Ile)	C/T	T1945I																		
+33,691,044(+)	NM_002224.4(ITPR3):c.7160G>C (p.Gly2387Ala)	G/C	G2387A																		
+33,691,104(+)	NM_002224.4(ITPR3):c.7220C>T (p.Ser2407Phe)	C/T	S2407F																		
+33,663,868(+)	NM_002224.4(ITPR3):c.1136C>T (p.Ser379Phe)	C/T	S379F																		
+33,688,287(+)	NM_002224.4(ITPR3):c.6424G>A (p.Gly2142Ser)	G/A	G2142S																		
+33,672,052(+)	NM_002224.4(ITPR3):c.2752C>G (p.Gln918Glu)	C/G	Q918E																		
+33,655,807(+)	NM_002224.4(ITPR3):c.202C>A (p.Gln68Lys)	C/A	Q68K																		
+33,662,655(+)	NM_002224.4(ITPR3):c.839A>G (p.Asn280Ser)	A/G	N280S																		
+33,675,785(+)	NM_002224.4(ITPR3):c.3211G>T (p.Val1071Phe)	G/T	V1071F																		
+33,690,077(+)	NM_002224.4(ITPR3):c.6911G>A (p.Arg2304His)	G/A	R2304H																		
+33,683,261(+)	NM_002224.4(ITPR3):c.4652T>C (p.Met1551Thr)	T/C	M1551T																		
+33,684,033(+)	NM_002224.4(ITPR3):c.4802C>T (p.Ala1601Val)	C/T	A1601V																		
+33,658,734(+)	NM_002224.4(ITPR3):c.434A>G (p.Lys145Arg)	A/G	K145R																		
+33,678,428(+)	NM_002224.4(ITPR3):c.3656C>G (p.Ala1219Gly)	C/G	A1219G																		
+33,685,753(+)	NM_002224.4(ITPR3):c.5593A>C (p.Thr1865Pro)	A/C	T1865P																		
+33,685,729(+)	NM_002224.4(ITPR3):c.5569C>T (p.Arg1857Cys)	C/T	R1857C																		
+33,670,519(+)	NM_002224.4(ITPR3):c.2384C>T (p.Thr795Met)	C/T	T795M																		
+33,688,288(+)	NM_002224.4(ITPR3):c.6425G>A (p.Gly2142Asp)	G/A	G2142D																		
+33,677,526(+)	NM_002224.4(ITPR3):c.3545T>A (p.Met1182Lys)	T/A	M1182K																		
+33,685,503(+)	NM_002224.4(ITPR3):c.5452G>A (p.Asp1818Asn)	G/A	D1818N																		
+33,676,844(+)	NM_002224.4(ITPR3):c.3359T>C (p.Met1120Thr)	T/C	M1120T																		
+33,687,232(+)	NM_002224.4(ITPR3):c.6082G>A (p.Val2028Ile)	G/A	V2028I																		
+33,678,659(+)	NM_002224.4(ITPR3):c.3792G>A (p.Met1264Ile)	G/A	M1264I																		
+33,670,673(+)	NM_002224.4(ITPR3):c.2444A>G (p.Tyr815Cys)	A/G	Y815C																		
+33,687,054(+)	NM_002224.4(ITPR3):c.6025G>A (p.Asp2009Asn)	G/A	D2009N																		
+33,670,434(+)	NM_002224.4(ITPR3):c.2299G>A (p.Glu767Lys)	G/A	E767K																		
+33,659,520(+)	NM_002224.4(ITPR3):c.682C>G (p.Arg228Gly)	C/G	R228G																		
+33,687,320(+)	NM_002224.4(ITPR3):c.6170C>T (p.Ala2057Val)	C/T	A2057V																		
+33,680,127(+)	NM_002224.4(ITPR3):c.4218C>G (p.Ile1406Met)	C/G	I1406M																		
+33,679,967(+)	NM_002224.4(ITPR3):c.4058G>A (p.Arg1353His)	G/A	R1353H																		
+33,691,692(+)	NM_002224.4(ITPR3):c.7303G>C (p.Gly2435Arg)	G/C	G2435R																		
+33,688,120(+)	NM_002224.4(ITPR3):c.6328G>A (p.Glu2110Lys)	G/A	E2110K																		
+33,682,566(+)	NM_002224.4(ITPR3):c.4519C>T (p.Arg1507Cys)	C/T	R1507C																		
+33,686,493(+)	NM_002224.4(ITPR3):c.5953C>T (p.Arg1985Cys)	C/T	R1985C																		
+33,662,583(+)	NM_002224.4(ITPR3):c.767A>G (p.Glu256Gly)	A/G	E256G																		
+33,669,105(+)	NM_002224.4(ITPR3):c.2138A>T (p.Gln713Leu)	A/T	Q713L																		
+33,687,311(+)	NM_002224.4(ITPR3):c.6161A>G (p.Tyr2054Cys)	A/G	Y2054C																		
+33,659,105(+)	NM_002224.4(ITPR3):c.613G>A (p.Ala205Thr)	G/A	A205T																		
+33,684,679(+)	NM_002224.4(ITPR3):c.5128A>C (p.Ile1710Leu)	A/C	I1710L																		
+33,686,416(+)	NM_002224.4(ITPR3):c.5876T>C (p.Ile1959Thr)	T/C	I1959T																		
+33,670,702(+)	NM_002224.4(ITPR3):c.2473G>C (p.Asp825His)	G/C	D825H																		
+33,668,974(+)	NM_002224.4(ITPR3):c.2007G>C (p.Glu669Asp)	G/C	E669D																		
+33,621,627(+)	NM_002224.4(ITPR3):c.25C>T (p.His9Tyr)	C/T	H9Y																		
+33,667,186(+)	NM_002224.4(ITPR3):c.1609C>T (p.Arg537Trp)	C/T	R537W																		
+33,671,300(+)	NM_002224.4(ITPR3):c.2722C>A (p.Pro908Thr)	C/A	P908T																		
+33,669,111(+)	NM_002224.4(ITPR3):c.2144C>T (p.Ala715Val)	C/T	A715V																		
+33,640,524(+)	NM_002224.4(ITPR3):c.130G>C (p.Asp44His)	G/C	D44H																		
+33,691,635(+)	NM_002224.4(ITPR3):c.7246C>G (p.His2416Asp)	C/G	H2416D																		
+33,671,270(+)	NM_002224.4(ITPR3):c.2692C>A (p.Pro898Thr)	C/A	P898T																		
+33,688,254(+)	NM_002224.4(ITPR3):c.6391C>T (p.Arg2131Cys)	C/T	R2131C																		
+33,685,777(+)	NM_002224.4(ITPR3):c.5617A>G (p.Ile1873Val)	A/G	I1873V																		
+33,685,444(+)	NM_002224.4(ITPR3):c.5393A>G (p.Gln1798Arg)	A/G	Q1798R																		
+33,678,536(+)	NM_002224.4(ITPR3):c.3764C>T (p.Thr1255Met)	C/T	T1255M																		
+33,691,807(+)	NM_002224.4(ITPR3):c.7337G>A (p.Arg2446Lys)	G/A	R2446K																		
+33,693,647(+)	NM_002224.4(ITPR3):c.7727G>A (p.Arg2576His)	G/A	R2576H																		
+33,691,699(+)	NM_002224.4(ITPR3):c.7310C>T (p.Ser2437Leu)	C/T	S2437L																		
+33,655,771(+)	NM_002224.4(ITPR3):c.166C>G (p.Leu56Val)	C/G	L56V																		
+33,678,455(+)	NM_002224.4(ITPR3):c.3683C>T (p.Thr1228Met)	C/T	T1228M																		
+33,657,971(+)	NM_002224.4(ITPR3):c.322A>G (p.Asn108Asp)	A/G	N108D																		
+33,663,861(+)	NM_002224.4(ITPR3):c.1129A>C (p.Thr377Pro)	A/C	T377P																		
+33,683,339(+)	NM_002224.4(ITPR3):c.4730C>T (p.Pro1577Leu)	C/T	P1577L																		
+33,667,168(+)	NM_002224.4(ITPR3):c.1591G>T (p.Gly531Cys)	G/T	G531C																		
+33,669,114(+)	NM_002224.4(ITPR3):c.2147G>A (p.Arg716Gln)	G/A	R716Q																		
+33,684,795(+)	NM_002224.4(ITPR3):c.5159C>T (p.Ala1720Val)	C/T	A1720V																		
+33,687,097(+)	NM_002224.4(ITPR3):c.6068A>G (p.Gln2023Arg)	A/G	Q2023R																		
+33,677,532(+)	NM_002224.4(ITPR3):c.3551G>A (p.Gly1184Glu)	G/A	G1184E																		
+33,678,493(+)	NM_002224.4(ITPR3):c.3721G>A (p.Gly1241Ser)	G/A	G1241S																		
+33,684,683(+)	NM_002224.4(ITPR3):c.5132G>A (p.Gly1711Asp)	G/A	G1711D																		
+33,674,253(+)	NM_002224.4(ITPR3):c.3104T>C (p.Met1035Thr)	T/C	M1035T																		
+33,687,230(+)	NM_002224.4(ITPR3):c.6080A>G (p.Asp2027Gly)	A/G	D2027G																		
+33,663,759(+)	NM_002224.4(ITPR3):c.1027C>T (p.Arg343Cys)	C/T	R343C																		
+33,685,817(+)	NM_002224.4(ITPR3):c.5657G>A (p.Arg1886Gln)	G/A	R1886Q																		
+33,668,978(+)	NM_002224.4(ITPR3):c.2011C>T (p.Arg671Trp)	C/T	R671W																		
+33,676,891(+)	NM_002224.4(ITPR3):c.3406G>A (p.Gly1136Ser)	G/A	G1136S																		
+33,691,692(+)	NM_002224.4(ITPR3):c.7303G>A (p.Gly2435Arg)	G/A	G2435R																		
+33,679,963(+)	NM_002224.4(ITPR3):c.4054G>A (p.Ala1352Thr)	G/A	A1352T																		
+33,675,855(+)	NM_002224.4(ITPR3):c.3281A>G (p.Gln1094Arg)	A/G	Q1094R																		
+33,678,720(+)	NM_002224.4(ITPR3):c.3853C>T (p.His1285Tyr)	C/T	H1285Y																		
+33,692,876(+)	NM_002224.4(ITPR3):c.7607C>T (p.Thr2536Met)	C/T	T2536M																		
+33,688,057(+)	NM_002224.4(ITPR3):c.6265C>T (p.Leu2089Phe)	C/T	L2089F																		
+33,685,646(+)	NM_002224.4(ITPR3):c.5486G>T (p.Arg1829Leu)	G/T	R1829L																		
+33,664,950(+)	NM_002224.4(ITPR3):c.1229A>G (p.Glu410Gly)	A/G	E410G																		
+33,695,776(+)	NM_002224.4(ITPR3):c.8012G>A (p.Arg2671His)	G/A	R2671H																		
+33,685,784(+)	NM_002224.4(ITPR3):c.5624G>A (p.Arg1875His)	G/A	R1875H																		
+33,663,522(+)	NM_002224.4(ITPR3):c.977A>G (p.Asp326Gly)	A/G	D326G																		
+33,678,446(+)	NM_002224.4(ITPR3):c.3674T>G (p.Leu1225Arg)	T/G	L1225R																		
+33,691,031(+)	NM_002224.4(ITPR3):c.7147T>C (p.Phe2383Leu)	T/C	F2383L																		
+33,655,780(+)	NM_002224.4(ITPR3):c.175G>A (p.Val59Met)	G/A	V59M																		
+33,672,049(+)	NM_002224.4(ITPR3):c.2749A>C (p.Ile917Leu)	A/C	I917L																		
+33,691,857(+)	NM_002224.4(ITPR3):c.7387G>A (p.Val2463Ile)	G/A	V2463I																		
+33,691,085(+)	NM_002224.4(ITPR3):c.7201C>T (p.Arg2401Trp)	C/T	R2401W																		
+33,676,912(+)	NM_002224.4(ITPR3):c.3427G>A (p.Ala1143Thr)	G/A	A1143T																		
+33,680,113(+)	NM_002224.4(ITPR3):c.4204C>T (p.His1402Tyr)	C/T	H1402Y																		
+33,667,961(+)	NM_002224.4(ITPR3):c.1883C>T (p.Pro628Leu)	C/T	P628L																		
+33,683,234(+)	NM_002224.4(ITPR3):c.4625T>C (p.Met1542Thr)	T/C	M1542T																		
+33,671,190(+)	NM_002224.4(ITPR3):c.2612T>C (p.Ile871Thr)	T/C	I871T																		
+33,695,775(+)	NM_002224.4(ITPR3):c.8011C>T (p.Arg2671Cys)	C/T	R2671C																		
+33,680,636(+)	NM_002224.4(ITPR3):c.4432G>T (p.Ala1478Ser)	G/T	A1478S																		
+33,676,876(+)	NM_002224.4(ITPR3):c.3391A>C (p.Lys1131Gln)	A/C	K1131Q																		
+33,659,055(+)	NM_002224.4(ITPR3):c.563T>G (p.Val188Gly)	T/G	V188G																		
+33,670,426(+)	NM_002224.4(ITPR3):c.2291T>C (p.Met764Thr)	T/C	M764T																		
+33,685,462(+)	NM_002224.4(ITPR3):c.5411T>C (p.Val1804Ala)	T/C	V1804A																		
+33,695,739(+)	NM_002224.4(ITPR3):c.7975C>T (p.Arg2659Cys)	C/T	R2659C																		
+33,682,635(+)	NM_002224.4(ITPR3):c.4588G>C (p.Ala1530Pro)	G/C	A1530P																		
+33,685,485(+)	NM_002224.4(ITPR3):c.5434G>A (p.Gly1812Ser)	G/A	G1812S																		
+33,662,546(+)	NM_002224.4(ITPR3):c.730T>C (p.Phe244Leu)	T/C	F244L																		
+33,621,614(+)	NM_002224.4(ITPR3):c.12G>A (p.Met4Ile)	G/A	M4I																		
+33,665,939(+)	NM_002224.4(ITPR3):c.1514G>A (p.Arg505Gln)	G/A	R505Q																		
+33,667,187(+)	NM_002224.4(ITPR3):c.1610G>A (p.Arg537Gln)	G/A	R537Q																		
+33,667,918(+)	NM_002224.4(ITPR3):c.1840G>A (p.Glu614Lys)	G/A	E614K																		
+33,667,954(+)	NM_002224.4(ITPR3):c.1876C>T (p.Arg626Trp)	C/T	R626W																		
+33,670,383(+)	NM_002224.4(ITPR3):c.2248G>A (p.Glu750Lys)	G/A	E750K																		
+33,671,292(+)	NM_002224.4(ITPR3):c.2714A>G (p.Tyr905Cys)	A/G	Y905C																		
+33,672,103(+)	NM_002224.4(ITPR3):c.2803G>A (p.Val935Ile)	G/A	V935I																		
+33,672,205(+)	NM_002224.4(ITPR3):c.2905C>A (p.Leu969Met)	C/A	L969M																		
+33,673,684(+)	NM_002224.4(ITPR3):c.3022G>T (p.Gly1008Trp)	G/T	G1008W																		
+33,673,697(+)	NM_002224.4(ITPR3):c.3035C>T (p.Thr1012Ile)	C/T	T1012I																		
+33,674,225(+)	NM_002224.4(ITPR3):c.3076G>C (p.Asp1026His)	G/C	D1026H																		
+33,675,746(+)	NM_002224.4(ITPR3):c.3172G>A (p.Val1058Met)	G/A	V1058M																		
+33,675,780(+)	NM_002224.4(ITPR3):c.3206C>T (p.Pro1069Leu)	C/T	P1069L																		
+33,677,056(+)	NM_002224.4(ITPR3):c.3489G>C (p.Glu1163Asp)	G/C	E1163D																		
+33,684,816(+)	NM_002224.4(ITPR3):c.5180G>A (p.Arg1727Gln)	G/A	R1727Q																		
+33,685,654(+)	NM_002224.4(ITPR3):c.5494T>G (p.Ser1832Ala)	T/G	S1832A																		
+33,685,658(+)	NM_002224.4(ITPR3):c.5498T>C (p.Phe1833Ser)	T/C	F1833S																		
+33,685,714(+)	NM_002224.4(ITPR3):c.5554C>T (p.His1852Tyr)	C/T	H1852Y																		
+33,686,213(+)	NM_002224.4(ITPR3):c.5828C>G (p.Thr1943Ser)	C/G	T1943S																		
+33,686,440(+)	NM_002224.4(ITPR3):c.5900T>C (p.Ile1967Thr)	T/C	I1967T																		
+33,687,232(+)	NM_002224.4(ITPR3):c.6082G>C (p.Val2028Leu)	G/C	V2028L																		
+33,687,542(+)	NM_002224.4(ITPR3):c.6242A>C (p.Glu2081Ala)	A/C	E2081A																		
+33,687,547(+)	NM_002224.4(ITPR3):c.6247G>A (p.Glu2083Lys)	G/A	E2083K																		
+33,689,316(+)	NM_002224.4(ITPR3):c.6773G>A (p.Arg2258His)	G/A	R2258H																		
+33,690,076(+)	NM_002224.4(ITPR3):c.6910C>T (p.Arg2304Cys)	C/T	R2304C																		
+33,690,092(+)	NM_002224.4(ITPR3):c.6926G>C (p.Arg2309Pro)	G/C	R2309P																		
+33,691,040(+)	NM_002224.4(ITPR3):c.7156G>A (p.Val2386Ile)	G/A	V2386I																		
+33,691,672(+)	NM_002224.4(ITPR3):c.7283A>T (p.Asp2428Val)	A/T	D2428V																		
+33,693,586(+)	NM_002224.4(ITPR3):c.7666G>A (p.Glu2556Lys)	G/A	E2556K																		
+33,694,954(+)	NM_002224.4(ITPR3):c.7816C>G (p.Arg2606Gly)	C/G	R2606G																		
+33,694,955(+)	NM_002224.4(ITPR3):c.7817G>A (p.Arg2606Gln)	G/A	R2606Q																		
+33,695,725(+)	NM_002224.4(ITPR3):c.7961G>A (p.Arg2654Gln)	G/A	R2654Q																		
+33,663,531(+)	NM_002224.4(ITPR3):c.986A>T (p.Asp329Val)	A/T	D329V																		
+33,663,533(+)	NM_002224.4(ITPR3):c.988C>T (p.Pro330Ser)	C/T	P330S																		
+33,675,841(+)	NM_002224.4(ITPR3):c.3267G>A (p.Met1089Ile)	G/A	M1089I																		
+33,685,711(+)	NM_002224.4(ITPR3):c.5551G>C (p.Gly1851Arg)	G/C	G1851R																		
+33,673,702(+)	NM_002224.4(ITPR3):c.3040C>A (p.Pro1014Thr)	C/A	P1014T																		
+33,676,925(+)	NM_002224.4(ITPR3):c.3440A>G (p.Lys1147Arg)	A/G	K1147R																		
+33,687,283(+)	NM_002224.4(ITPR3):c.6133A>G (p.Ser2045Gly)	A/G	S2045G																		
+33,673,593(+)	NM_002224.4(ITPR3):c.2931C>A (p.Phe977Leu)	C/A	F977L																		
+33,667,938(+)	NM_002224.4(ITPR3):c.1860C>A (p.Ser620Arg)	C/A	S620R																		
+33,689,355(+)	NM_002224.4(ITPR3):c.6812G>A (p.Arg2271His)	G/A	R2271H																		
+33,693,703(+)	NM_002224.4(ITPR3):c.7783A>C (p.Lys2595Gln)	A/C	K2595Q																		
+33,693,578(+)	NM_002224.4(ITPR3):c.7658T>C (p.Val2553Ala)	T/C	V2553A																		
+33,679,975(+)	NM_002224.4(ITPR3):c.4066G>A (p.Val1356Met)	G/A	V1356M																		
+33,680,670(+)	NM_002224.4(ITPR3):c.4466C>A (p.Thr1489Asn)	C/A	T1489N																		
+33,665,185(+)	NM_002224.4(ITPR3):c.1381G>A (p.Glu461Lys)	G/A	E461K																		
+33,667,236(+)	NM_002224.4(ITPR3):c.1659C>A (p.Phe553Leu)	C/A	F553L																		
+33,684,464(+)	NM_002224.4(ITPR3):c.5045G>A (p.Arg1682Gln)	G/A	R1682Q																		
+33,689,319(+)	NM_002224.4(ITPR3):c.6776A>G (p.Tyr2259Cys)	A/G	Y2259C																		
+33,667,177(+)	NM_002224.4(ITPR3):c.1600C>T (p.Pro534Ser)	C/T	P534S																		
+33,679,914(+)	NM_002224.4(ITPR3):c.4005C>A (p.Phe1335Leu)	C/A	F1335L																		
+33,672,055(+)	NM_002224.4(ITPR3):c.2755G>T (p.Gly919Cys)	G/T	G919C																		
+33,686,447(+)	NM_002224.4(ITPR3):c.5907C>G (p.Ile1969Met)	C/G	I1969M																		
+33,658,009(+)	NM_002224.4(ITPR3):c.360T>G (p.Ser120Arg)	T/G	S120R																		
+33,686,443(+)	NM_002224.4(ITPR3):c.5903A>T (p.Asp1968Val)	A/T	D1968V																		
+33,688,751(+)	NM_002224.4(ITPR3):c.6664T>C (p.Phe2222Leu)	T/C	F2222L																		
+33,662,663(+)	NM_002224.4(ITPR3):c.847T>C (p.Trp283Arg)	T/C	W283R																		
+33,667,818(+)	NM_002224.4(ITPR3):c.1740G>A (p.Met580Ile)	G/A	M580I																		
+33,658,703(+)	NM_002224.4(ITPR3):c.403G>T (p.Val135Leu)	G/T	V135L																		
+33,688,690(+)	NM_002224.4(ITPR3):c.6603G>A (p.Met2201Ile)	G/A	M2201I																		
+33,679,966(+)	NM_002224.4(ITPR3):c.4057C>T (p.Arg1353Cys)	C/T	R1353C																		
+33,687,048(+)	NM_002224.4(ITPR3):c.6019C>T (p.Arg2007Trp)	C/T	R2007W																		
+33,659,027(+)	NM_002224.4(ITPR3):c.535G>A (p.Val179Met)	G/A	V179M																		
+33,686,127(+)	NM_002224.4(ITPR3):c.5742G>C (p.Met1914Ile)	G/C	M1914I																		
+33,680,559(+)	NM_002224.4(ITPR3):c.4355G>A (p.Cys1452Tyr)	G/A	C1452Y																		
+33,677,015(+)	NM_002224.4(ITPR3):c.3448C>T (p.Arg1150Cys)	C/T	R1150C																		
+33,685,708(+)	NM_002224.4(ITPR3):c.5548C>T (p.Arg1850Trp)	C/T	R1850W																		
+33,683,216(+)	NM_002224.4(ITPR3):c.4607G>A (p.Arg1536Gln)	G/A	R1536Q																		
+33,687,541(+)	NM_002224.4(ITPR3):c.6241G>A (p.Glu2081Lys)	G/A	E2081K																		
+33,685,518(+)	NM_002224.4(ITPR3):c.5467G>A (p.Asp1823Asn)	G/A	D1823N																		
+33,689,276(+)	NM_002224.4(ITPR3):c.6733A>T (p.Ile2245Phe)	A/T	I2245F																		
+33,680,579(+)	NM_002224.4(ITPR3):c.4375G>A (p.Val1459Met)	G/A	V1459M																		
+33,669,083(+)	NM_002224.4(ITPR3):c.2116A>G (p.Lys706Glu)	A/G	K706E																		
+33,658,679(+)	NM_002224.4(ITPR3):c.379A>T (p.Met127Leu)	A/T	M127L																		
+33,663,760(+)	NM_002224.4(ITPR3):c.1028G>A (p.Arg343His)	G/A	R343H																		
+33,658,774(+)	NM_002224.4(ITPR3):c.474G>C (p.Glu158Asp)	G/C	E158D																		
+33,693,688(+)	NM_002224.4(ITPR3):c.7768G>A (p.Val2590Met)	G/A	V2590M																		
+33,663,516(+)	NM_002224.4(ITPR3):c.971A>C (p.Lys324Thr)	A/C	K324T																		
+33,664,875(+)	NM_002224.4(ITPR3):c.1154C>T (p.Ser385Leu)	C/T	S385L																		
+33,675,828(+)	NM_002224.4(ITPR3):c.3254G>T (p.Arg1085Leu)	G/T	R1085L																		
+33,658,812(+)	NM_002224.4(ITPR3):c.512G>A (p.Arg171Gln)	G/A	R171Q																		
+33,684,896(+)	NM_002224.4(ITPR3):c.5260A>G (p.Ile1754Val)	A/G	I1754V																		
+33,684,431(+)	NM_002224.4(ITPR3):c.5012A>T (p.Gln1671Leu)	A/T	Q1671L																		
+33,684,634(+)	NM_002224.4(ITPR3):c.5083C>G (p.Leu1695Val)	C/G	L1695V																		
+33,677,594(+)	NM_002224.4(ITPR3):c.3613G>T (p.Val1205Phe)	G/T	V1205F																		
+33,665,916(+)	NM_002224.4(ITPR3):c.1491G>A (p.Met497Ile)	G/A	M497I																		
+33,670,446(+)	NM_002224.4(ITPR3):c.2311T>C (p.Phe771Leu)	T/C	F771L																		
+33,695,724(+)	NM_002224.4(ITPR3):c.7960C>T (p.Arg2654Trp)	C/T	R2654W																		
+33,680,625(+)	NM_002224.4(ITPR3):c.4421A>G (p.Asp1474Gly)	A/G	D1474G																		
+33,689,343(+)	NM_002224.4(ITPR3):c.6800C>T (p.Ala2267Val)	C/T	A2267V																		
+33,682,555(+)	NM_002224.4(ITPR3):c.4508A>G (p.Gln1503Arg)	A/G	Q1503R																		
+33,684,643(+)	NM_002224.4(ITPR3):c.5092C>T (p.Arg1698Trp)	C/T	R1698W																		
+33,692,840(+)	NM_002224.4(ITPR3):c.7571G>A (p.Arg2524His)	G/A	R2524H																		
+33,695,713(+)	NM_002224.4(ITPR3):c.7949T>C (p.Met2650Thr)	T/C	M2650T																		
+33,665,126(+)	NM_002224.4(ITPR3):c.1322A>G (p.Asp441Gly)	A/G	D441G																		
+33,688,251(+)	NM_002224.4(ITPR3):c.6388G>T (p.Asp2130Tyr)	G/T	D2130Y																		
+33,685,681(+)	NM_002224.4(ITPR3):c.5521C>T (p.Arg1841Cys)	C/T	R1841C																		
+33,662,588(+)	NM_002224.4(ITPR3):c.772A>G (p.Lys258Glu)	A/G	K258E																		
+33,672,056(+)	NM_002224.4(ITPR3):c.2756G>T (p.Gly919Val)	G/T	G919V																		
+33,678,653(+)	NM_002224.4(ITPR3):c.3786G>C (p.Glu1262Asp)	G/C	E1262D																		
+33,671,216(+)	NM_002224.4(ITPR3):c.2638G>A (p.Glu880Lys)	G/A	E880K																		
+33,671,217(+)	NM_002224.4(ITPR3):c.2639A>T (p.Glu880Val)	A/T	E880V																		
+33,691,644(+)	NM_002224.4(ITPR3):c.7255G>A (p.Ala2419Thr)	G/A	A2419T																		
+33,655,867(+)	NM_002224.4(ITPR3):c.262G>T (p.Val88Leu)	G/T	V88L																		
+33,665,178(+)	NM_002224.4(ITPR3):c.1374A>T (p.Lys458Asn)	A/T	K458N																		
+33,686,081(+)	NM_002224.4(ITPR3):c.5696C>A (p.Thr1899Asn)	C/A	T1899N																		
+33,680,574(+)	NM_002224.4(ITPR3):c.4370A>G (p.Lys1457Arg)	A/G	K1457R																		
+33,665,141(+)	NM_002224.4(ITPR3):c.1337A>G (p.Asn446Ser)	A/G	N446S																		
+33,687,543(+)	NM_002224.4(ITPR3):c.6243G>C (p.Glu2081Asp)	G/C	E2081D																		
+33,688,348(+)	NM_002224.4(ITPR3):c.6485A>G (p.Asp2162Gly)	A/G	D2162G																		
+33,683,329(+)	NM_002224.4(ITPR3):c.4720C>T (p.Arg1574Trp)	C/T	R1574W																		
+33,684,030(+)	NM_002224.4(ITPR3):c.4799C>T (p.Thr1600Ile)	C/T	T1600I																		
+33,664,943(+)	NM_002224.4(ITPR3):c.1222G>A (p.Glu408Lys)	G/A	E408K																		
+33,684,653(+)	NM_002224.4(ITPR3):c.5102C>T (p.Thr1701Ile)	C/T	T1701I																		
+33,640,551(+)	NM_002224.4(ITPR3):c.157C>T (p.Arg53Cys)	C/T	R53C																		
+33,678,780(+)	NM_002224.4(ITPR3):c.3913A>G (p.Thr1305Ala)	A/G	T1305A																		
+33,664,961(+)	NM_002224.4(ITPR3):c.1240C>T (p.Arg414Trp)	C/T	R414W																		
+33,670,498(+)	NM_002224.4(ITPR3):c.2363G>A (p.Arg788His)	G/A	R788H																		
+33,658,800(+)	NM_002224.4(ITPR3):c.500T>G (p.Phe167Cys)	T/G	F167C																		
+33,664,884(+)	NM_002224.4(ITPR3):c.1163G>A (p.Arg388Gln)	G/A	R388Q																		
+33,675,755(+)	NM_002224.4(ITPR3):c.3181C>T (p.His1061Tyr)	C/T	H1061Y																		
+33,659,070(+)	NM_002224.4(ITPR3):c.578C>A (p.Pro193His)	C/A	P193H																		
+33,690,975(+)	NM_002224.4(ITPR3):c.7091G>A (p.Arg2364His)	G/A	R2364H																		
+33,680,606(+)	NM_002224.4(ITPR3):c.4402G>A (p.Val1468Met)	G/A	V1468M																		
+33,685,684(+)	NM_002224.4(ITPR3):c.5524T>C (p.Tyr1842His)	T/C	Y1842H																		
+33,684,849(+)	NM_002224.4(ITPR3):c.5213G>A (p.Cys1738Tyr)	G/A	C1738Y																		
+33,685,720(+)	NM_002224.4(ITPR3):c.5560G>A (p.Val1854Met)	G/A	V1854M																		
+33,683,381(+)	NM_002224.4(ITPR3):c.4772T>C (p.Ile1591Thr)	T/C	I1591T																		
+33,690,049(+)	NM_002224.4(ITPR3):c.6883G>A (p.Val2295Met)	G/A	V2295M																		
+33,677,081(+)	NM_002224.4(ITPR3):c.3514G>A (p.Val1172Ile)	G/A	V1172I																		
+33,691,076(+)	NM_002224.4(ITPR3):c.7192G>C (p.Glu2398Gln)	G/C	E2398Q																		
+33,686,194(+)	NM_002224.4(ITPR3):c.5809G>A (p.Val1937Ile)	G/A	V1937I																		
+33,663,742(+)	NM_002224.4(ITPR3):c.1010C>T (p.Ala337Val)	C/T	A337V																		
+33,679,923(+)	NM_002224.4(ITPR3):c.4014T>A (p.Asp1338Glu)	T/A	D1338E																		
+33,683,344(+)	NM_002224.4(ITPR3):c.4735G>A (p.Val1579Ile)	G/A	V1579I																		
+33,670,361(+)	NM_002224.4(ITPR3):c.2226C>A (p.Asp742Glu)	C/A	D742E																		
+33,691,695(+)	NM_002224.4(ITPR3):c.7306C>G (p.Leu2436Val)	C/G	L2436V	
+32,028,543(-)	NM_004521.3(KIF5B):c.1610T>C (p.Leu537Pro)	A/G	L537P	missense variant
+32,031,161(-)	NM_004521.3(KIF5B):c.1493T>C (p.Leu498Pro)	A/G	L498P	missense variant
+32,019,912(-)	NM_004521.3(KIF5B):c.2252A>G (p.His751Arg)	T/C	H751R	missense variant
+32,035,651(-)	NM_004521.3(KIF5B):c.833G>A (p.Arg278Gln)	C/T	R278Q	missense variant
+32,031,213(-)	NM_004521.3(KIF5B):c.1441A>C (p.Asn481His)	T/G	N481H	missense variant
+32,021,034(-)	NM_004521.3(KIF5B):c.2192C>T (p.Thr731Ile)	G/A	T731I	missense variant
+32,021,118(-)	NM_004521.3(KIF5B):c.2108A>G (p.Gln703Arg)	T/C	Q703R	missense variant
+32,022,996(-)	NM_004521.3(KIF5B):c.1766T>C (p.Val589Ala)	A/G	V589A	missense variant
+32,015,608(-)	NM_004521.3(KIF5B):c.2813G>A (p.Ser938Asn)	C/T	S938N	missense variant
+32,028,556(-)	NM_004521.3(KIF5B):c.1597A>C (p.Ile533Leu)	T/G	I533L	missense variant
+32,021,114(-)	NM_004521.3(KIF5B):c.2112G>T (p.Gln704His)	C/A	Q704H	missense variant
+32,015,558(-)	NM_004521.3(KIF5B):c.2863G>A (p.Val955Met)	C/T	V955M	missense variant
+32,032,728(-)	NM_004521.3(KIF5B):c.1352C>T (p.Thr451Met)	G/A	T451M	missense variant
+32,048,522(-)	NM_004521.3(KIF5B):c.156C>G (p.Phe52Leu)	G/C	F52L	missense variant
+32,035,592(-)	NM_004521.3(KIF5B):c.892A>G (p.Ile298Val)	T/C	I298V	missense variant
+32,021,058(-)	NM_004521.3(KIF5B):c.2168T>C (p.Val723Ala)	A/G	V723A	missense variant
+32,023,018(-)	NM_004521.3(KIF5B):c.1744A>G (p.Met582Val)	T/C	M582V	missense variant
+32,028,564(-)	NM_004521.3(KIF5B):c.1589T>C (p.Leu530Ser)	A/G	L530S	missense variant
+32,028,499(-)	NM_004521.3(KIF5B):c.1654G>T (p.Ala552Ser)	C/A	A552S	missense variant
+32,040,412(-)	NM_004521.3(KIF5B):c.260C>T (p.Thr87Ile)	G/A	T87I	missense variant
+32,035,619(-)	NM_004521.3(KIF5B):c.865T>G (p.Ser289Ala)	A/C	S289A	missense variant
+32,022,229(-)	NM_004521.3(KIF5B):c.1943A>C (p.Glu648Ala)	T/G	E648A	missense variant
+32,040,429(-)	NM_004521.3(KIF5B):c.243A>G (p.Ile81Met)	T/C	I81M	missense variant
+32,033,951(-)	NM_004521.3(KIF5B):c.1199A>G (p.Asn400Ser)	T/C	N400S	missense variant
+32,033,904(-)	NM_004521.3(KIF5B):c.1246G>A (p.Ala416Thr)	C/T	A416T	missense variant
+32,028,538(-)	NM_004521.3(KIF5B):c.1615A>C (p.Lys539Gln)	T/G	K539Q	missense variant
+32,019,867(-)	NM_004521.3(KIF5B):c.2297A>G (p.His766Arg)	T/C	H766R	missense variant
+32,018,099(-)	NM_004521.3(KIF5B):c.2497T>A (p.Ser833Thr)	A/T	S833T	missense variant
+32,017,352(-)	NM_004521.3(KIF5B):c.2552G>T (p.Arg851Leu)	C/A	R851L	missense variant
+32,015,560(-)	NM_004521.3(KIF5B):c.2861C>T (p.Ala954Val)	G/A	A954V	missense variant
+32,055,922(-)	NM_004521.3(KIF5B):c.52C>T (p.Leu18Phe)	G/A	L18F	missense variant
+32,031,218(-)	NM_004521.3(KIF5B):c.1436C>T (p.Ala479Val)	G/A	A479V	missense variant
+32,032,741(-)	NM_004521.3(KIF5B):c.1339G>C (p.Glu447Gln)	C/G	E447Q	missense variant
+32,035,951(-)	NM_004521.3(KIF5B):c.755A>C (p.Lys252Thr)	T/G	K252T	missense variant
+32,022,933(-)	NM_004521.3(KIF5B):c.1829A>G (p.Gln610Arg)	T/C	Q610R	missense variant
+32,017,339(-)	NM_004521.3(KIF5B):c.2565T>A (p.Asp855Glu)	A/T	D855E	missense variant
+32,033,890(-)	NM_004521.3(KIF5B):c.1260G>C (p.Lys420Asn)	C/G	K420N	missense variant
+32,040,416(-)	NM_004521.3(KIF5B):c.256C>A (p.Gln86Lys)	G/T	Q86K	missense variant
+32,015,539(-)	NM_004521.3(KIF5B):c.2882A>G (p.Lys961Arg)	T/C	K961R	missense variant
+32,018,069(-)	NM_004521.3(KIF5B):c.2527A>G (p.Thr843Ala)	T/C	T843A	missense variant
+32,023,011(-)	NM_004521.3(KIF5B):c.1751A>T (p.Asp584Val)	T/A	D584V	missense variant
+32,034,780(-)	NM_004521.3(KIF5B):c.1021A>G (p.Lys341Glu)	T/C	K341E	missense variant
+32,034,828(-)	NM_004521.3(KIF5B):c.973A>G (p.Ile325Val)	T/C	I325V	missense variant
+32,048,515(-)	NM_004521.3(KIF5B):c.163A>C (p.Ser55Arg)	T/G	S55R	missense variant
+32,017,293(-)	NM_004521.3(KIF5B):c.2611G>A (p.Ala871Thr)	C/T	A871T	missense variant
+32,033,933(-)	NM_004521.3(KIF5B):c.1217C>T (p.Ala406Val)	G/A	A406V	missense variant
+32,017,183(-)	NM_004521.3(KIF5B):c.2721G>C (p.Arg907Ser)	C/G	R907S	missense variant
+32,037,547(-)	NM_004521.3(KIF5B):c.559A>G (p.Lys187Glu)	T/C	K187E	missense variant
+32,040,399(-)	NM_004521.3(KIF5B):c.273G>T (p.Lys91Asn)	C/A	K91N	missense variant
+32,040,392(-)	NM_004521.3(KIF5B):c.280A>G (p.Thr94Ala)	T/C	T94A	missense variant
+32,035,952(-)	NM_004521.3(KIF5B):c.754A>G (p.Lys252Glu)	T/C	K252E	missense variant
+32,021,087(-)	NM_004521.3(KIF5B):c.2139A>C (p.Gln713His)	T/G	Q713H	missense variant
+32,048,497(-)	NM_004521.3(KIF5B):c.181G>A (p.Val61Met)	C/T	V61M	missense variant
+32,034,744(-)	NM_004521.3(KIF5B):c.1057A>G (p.Ile353Val)	T/C	I353V	missense variant
+32,021,261(-)	NM_004521.3(KIF5B):c.2059C>T (p.His687Tyr)	G/A	H687Y	missense variant
+32,028,466(-)	NM_004521.3(KIF5B):c.1687G>A (p.Ala563Thr)	C/T	A563T	missense variant
+32,019,927(-)	NM_004521.3(KIF5B):c.2237G>A (p.Arg746His)	C/T	R746H	missense variant
+32,032,713(-)	NM_004521.3(KIF5B):c.1367A>G (p.Gln456Arg)	T/C	Q456R	missense variant
+32,031,201(-)	NM_004521.3(KIF5B):c.1453A>G (p.Lys485Glu)	T/C	K485E	missense variant
+32,028,555(-)	NM_004521.3(KIF5B):c.1598T>C (p.Ile533Thr)	A/G	I533T	missense variant
+32,021,260(-)	NM_004521.3(KIF5B):c.2060A>G (p.His687Arg)	T/C	H687R	missense variant
+32,022,224(-)	NM_004521.3(KIF5B):c.1948C>T (p.Leu650Phe)	G/A	L650F	missense variant
+32,033,934(-)	NM_004521.3(KIF5B):c.1216G>A (p.Ala406Thr)	C/T	A406T	missense variant
+32,031,074(-)	NM_004521.3(KIF5B):c.1580C>T (p.Ser527Leu)	G/A	S527L	missense variant
+32,033,921(-)	NM_004521.3(KIF5B):c.1229T>C (p.Ile410Thr)	A/G	I410T	missense variant			

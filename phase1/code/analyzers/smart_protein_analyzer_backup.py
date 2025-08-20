@@ -118,8 +118,8 @@ class SmartProteinAnalyzer:
             else:
                 self.logger.debug("🔧 Skipping API calls in offline mode")
 
-            # Source 3: Sequence motifs + interface context (HYBRID!)
-            motif_multiplier, motif_conf = self._get_motif_multiplier(sequence, position, uniprot_id)
+            # Source 3: Sequence motifs (works offline!)
+            motif_multiplier, motif_conf = self._get_motif_multiplier(sequence, position)
             if motif_multiplier > 1.0:
                 multiplier *= motif_multiplier
                 confidence += motif_conf
@@ -215,177 +215,34 @@ class SmartProteinAnalyzer:
         self.go_cache[uniprot_id] = result
         return result
     
-    def _get_motif_multiplier(self, sequence: str, position: int, uniprot_id: str = None) -> Tuple[float, float]:
-        """HYBRID APPROACH: Motifs + Interface Context (Best of both worlds!)"""
-
+    def _get_motif_multiplier(self, sequence: str, position: int) -> Tuple[float, float]:
+        """Get multiplier from sequence motifs (works offline!)"""
+        
         if not sequence:
             return 1.0, 0.0
-
-        max_motif_weight = 1.0
+        
+        max_weight = 1.0
         motifs_found = []
-
-        # STEP 1: Detect motifs (keep the good science!)
+        
+        # Check each motif pattern
         for pattern, (motif_name, weight) in self.motif_patterns.items():
             matches = list(re.finditer(pattern, sequence))
-
+            
             for match in matches:
                 start, end = match.span()
-
-                # Check if mutation is INSIDE the motif (not just near it!)
-                if start <= position <= end:
-                    max_motif_weight = max(max_motif_weight, weight)
+                
+                # Check if mutation is near this motif (within 10 residues)
+                if abs(position - start) <= 10 or abs(position - end) <= 10:
+                    max_weight = max(max_weight, weight)
                     motifs_found.append(motif_name)
-                    self.logger.info(f"🎯 Mutation {position} is INSIDE {motif_name} motif (positions {start}-{end})")
-
-        # STEP 2: Get interface context weight
-        interface_weight = self._get_interface_context_weight(uniprot_id, position)
-
-        # STEP 3: Apply hybrid scoring logic
-        if max_motif_weight > 1.0:
-            # Motif detected - modulate by interface context
-            final_weight = max_motif_weight * interface_weight
-            confidence = 0.4 if interface_weight > 0.8 else 0.3
-
-            if motifs_found:
-                self.logger.info(f"🎯 Motifs near position {position}: {', '.join(motifs_found)}")
-                self.logger.info(f"🎯 Interface context: {interface_weight:.2f}x")
-                self.logger.info(f"🎯 Hybrid score: {max_motif_weight:.2f} × {interface_weight:.2f} = {final_weight:.2f}")
-        else:
-            # No motif - but check if interface alone gives boost
-            if interface_weight > 1.2:
-                final_weight = 1.0 + (interface_weight - 1.0) * 0.5  # Reduced interface-only boost
-                confidence = 0.2
-                self.logger.info(f"🎯 No motif, but interface potential: {final_weight:.2f}x")
-            else:
-                final_weight = 1.0
-                confidence = 0.0
-
-        return final_weight, confidence
-
-    def _get_interface_context_weight(self, uniprot_id: str, position: int) -> float:
-        """Get interface context weight using AlphaFold structure"""
-        try:
-            if not uniprot_id:
-                return 1.0
-
-            # Try to get AlphaFold structure
-            alphafold_path = f"/mnt/Arcana/genetics_data/alphafold_cache/{uniprot_id}.pdb"
-
-            import os
-            if not os.path.exists(alphafold_path):
-                return 1.0  # No structure available
-
-            from Bio.PDB import PDBParser
-            parser = PDBParser(QUIET=True)
-            structure = parser.get_structure('protein', alphafold_path)
-
-            # Find the target residue
-            target_residue = None
-            for model in structure:
-                for chain in model:
-                    for residue in chain:
-                        if residue.get_id()[1] == position:
-                            target_residue = residue
-                            break
-                    if target_residue:
-                        break
-                if target_residue:
-                    break
-
-            if not target_residue or 'CA' not in target_residue:
-                return 1.0
-
-            # Calculate interface context score
-            interface_score = 0.0
-
-            # Factor 1: AlphaFold confidence (reliability)
-            confidence = target_residue['CA'].get_bfactor()
-            if confidence > 90:
-                interface_score += 0.4
-            elif confidence > 70:
-                interface_score += 0.2
-
-            # Factor 2: Surface exposure (potential interface)
-            surface_score = self._calculate_surface_exposure(target_residue, structure)
-            interface_score += surface_score * 0.3
-
-            # Factor 3: Local environment (charged/hydrophobic clusters)
-            environment_score = self._calculate_environment_score(target_residue, structure)
-            interface_score += environment_score * 0.3
-
-            # Convert to multiplier (1.0 = neutral, >1.0 = boost, <1.0 = reduce)
-            if interface_score > 0.7:
-                return 1.3  # High interface potential
-            elif interface_score > 0.5:
-                return 1.1  # Medium interface potential
-            elif interface_score > 0.3:
-                return 1.0  # Neutral
-            else:
-                return 0.8  # Low interface potential (reduce motif importance)
-
-        except Exception as e:
-            self.logger.debug(f"Interface analysis failed: {e}")
-            return 1.0  # Default to neutral
-
-    def _calculate_surface_exposure(self, target_residue, structure):
-        """Calculate surface exposure score"""
-        try:
-            target_coords = target_residue['CA'].get_coord()
-            nearby_count = 0
-
-            for model in structure:
-                for chain in model:
-                    for residue in chain:
-                        if residue == target_residue:
-                            continue
-                        if 'CA' in residue:
-                            distance = ((target_coords - residue['CA'].get_coord())**2).sum()**0.5
-                            if distance < 8.0:
-                                nearby_count += 1
-
-            # Surface residues have fewer neighbors
-            if nearby_count < 12:
-                return 1.0  # Surface exposed
-            elif nearby_count < 20:
-                return 0.5  # Partially exposed
-            else:
-                return 0.1  # Buried
-
-        except:
-            return 0.5
-
-    def _calculate_environment_score(self, target_residue, structure):
-        """Calculate local environment score"""
-        try:
-            target_coords = target_residue['CA'].get_coord()
-            charged_nearby = 0
-            hydrophobic_nearby = 0
-
-            for model in structure:
-                for chain in model:
-                    for residue in chain:
-                        if residue == target_residue:
-                            continue
-                        if 'CA' in residue:
-                            distance = ((target_coords - residue['CA'].get_coord())**2).sum()**0.5
-                            if distance < 10.0:
-                                resname = residue.get_resname()
-                                if resname in ['ARG', 'LYS', 'ASP', 'GLU', 'HIS']:
-                                    charged_nearby += 1
-                                elif resname in ['PHE', 'TRP', 'TYR', 'LEU', 'ILE', 'VAL', 'MET']:
-                                    hydrophobic_nearby += 1
-
-            # Clusters suggest functional importance
-            if charged_nearby > 3 or hydrophobic_nearby > 4:
-                return 1.0  # Strong clustering
-            elif charged_nearby > 1 or hydrophobic_nearby > 2:
-                return 0.5  # Moderate clustering
-            else:
-                return 0.1  # No clustering
-
-        except:
-            return 0.5
-
+        
+        confidence = 0.1 if max_weight > 1.0 else 0.0
+        
+        if motifs_found:
+            self.logger.info(f"🎯 Motifs near position {position}: {', '.join(motifs_found)}")
+        
+        return max_weight, confidence
+    
     def get_analysis_summary(self, uniprot_id: str, sequence: str, position: int) -> Dict:
         """Get detailed analysis summary for debugging"""
         
@@ -394,7 +251,7 @@ class SmartProteinAnalyzer:
         # Get individual components
         pfam_mult, pfam_conf = self._get_pfam_multiplier(uniprot_id)
         go_mult, go_conf = self._get_go_multiplier(uniprot_id)
-        motif_mult, motif_conf = self._get_motif_multiplier(sequence, position, uniprot_id)
+        motif_mult, motif_conf = self._get_motif_multiplier(sequence, position)
         
         return {
             'final_multiplier': multiplier,

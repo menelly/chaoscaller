@@ -146,16 +146,9 @@ class HGVSParser:
                             logger.info(f"✅ Found gene: {gene_name}")
                             return gene_name
             
-            # Fallback: known transcript mappings
-            known_transcripts = {
-                'NM_123456.1': 'DEMO_GENE_A',
-                'NM_654321.2': 'DEMO_GENE_B',
-                'NM_999999.3': 'TEST_GENE'
-            }
-            
-            gene = known_transcripts.get(transcript, 'Unknown')
-            logger.info(f"📚 Fallback gene lookup: {gene}")
-            return gene
+            # NO FAKE GENE MAPPINGS - return error for unknown transcripts
+            logger.error(f"❌ Gene lookup failed for {transcript} - transcript not found in NCBI database")
+            return 'Unknown'
             
         except Exception as e:
             logger.error(f"❌ Gene lookup failed: {e}")
@@ -176,18 +169,8 @@ class HGVSParser:
             if result:
                 return result
             
-            # Fallback: known coordinates for demo + real FKRP
-            known_coords = {
-                ('NM_123456.1', 123): 'chr1:12345678',
-                ('NM_654321.2', 456): 'chr2:98765432',
-                # FKRP gene coordinates (chromosome 19)
-                ('NM_024301.5', 826): 'chr19:47267094'  # FKRP c.826C>A position
-            }
-            
-            coord = known_coords.get((transcript, cdna_position))
-            if coord:
-                logger.info(f"📚 Fallback coordinate: {coord}")
-                return coord
+            # NO FAKE COORDINATES - only real API results allowed
+            # Note: FKRP coordinate was manually verified but we need proper API lookup
             
             logger.error(f"❌ Could not convert {transcript}:c.{cdna_position}")
             return None
@@ -322,26 +305,34 @@ def parse_hgvs():
         data = request.get_json()
         hgvs_string = data.get('hgvs')
         build = data.get('build', 'hg38')
-        
+        user_genomic_coord = data.get('genomic_coordinate')
+
         logger.info(f"🧬 Processing HGVS: {hgvs_string}")
-        
+        if user_genomic_coord:
+            logger.info(f"🗺️ User provided genomic coordinate: {user_genomic_coord}")
+
         if not hgvs_string:
             return jsonify({'error': 'HGVS notation required'}), 400
-        
+
         # Parse HGVS
         parsed = hgvs_parser.parse_hgvs(hgvs_string)
         if not parsed:
             return jsonify({'error': 'Invalid HGVS format'}), 400
-        
+
         # Get gene name
         gene_name = hgvs_parser.get_gene_from_transcript(parsed['transcript'])
-        
-        # Convert to genomic coordinate
-        genomic_coord = hgvs_parser.convert_to_genomic(
-            parsed['transcript'], 
-            parsed['cdna_position'], 
-            build
-        )
+
+        # Use user-provided coordinate if available, otherwise try API conversion
+        if user_genomic_coord:
+            genomic_coord = user_genomic_coord
+            logger.info(f"✅ Using user-provided genomic coordinate: {genomic_coord}")
+        else:
+            # Convert to genomic coordinate via APIs
+            genomic_coord = hgvs_parser.convert_to_genomic(
+                parsed['transcript'],
+                parsed['cdna_position'],
+                build
+            )
         
         result = {
             'gene': gene_name,
@@ -428,7 +419,30 @@ def download_alphafold_structure():
 
         # Use AlphaFold client if available, otherwise return error
         if alphafold_client:
-            result = alphafold_client.get_structure_info(gene_name)
+            # Try local proteome first, then fallback to API download
+            structure_path = alphafold_client.find_local_structure(gene_name)
+
+            if structure_path:
+                result = {
+                    'success': True,
+                    'structure_path': structure_path,
+                    'gene': gene_name,
+                    'source': 'local_proteome'
+                }
+                logger.info(f"✅ Found local structure for {gene_name}")
+            else:
+                # Fallback to API download (original method)
+                structure_path = alphafold_client.get_structure(gene_name)
+                if structure_path:
+                    result = {
+                        'success': True,
+                        'structure_path': structure_path,
+                        'gene': gene_name,
+                        'source': 'api_download'
+                    }
+                    logger.info(f"✅ Downloaded structure for {gene_name}")
+                else:
+                    result = {'error': f'AlphaFold structure not found for {gene_name} (tried local and API)'}
             if 'error' in result:
                 return jsonify({'error': result['error']}), 400
         else:
@@ -451,6 +465,58 @@ def download_alphafold_structure():
     except Exception as e:
         logger.error(f"❌ AlphaFold download failed: {e}")
         return jsonify({'error': str(e)}), 500
+
+@app.route('/api/population_frequency', methods=['POST'])
+def analyze_population_frequency():
+    """Analyze population frequency with triple-tier fallback system"""
+    try:
+        data = request.get_json()
+        chromosome = data.get('chromosome')
+        position = data.get('position')
+        ref_allele = data.get('ref_allele')
+        alt_allele = data.get('alt_allele')
+
+        if not all([chromosome, position, ref_allele, alt_allele]):
+            return jsonify({'error': 'Missing required parameters: chromosome, position, ref_allele, alt_allele'}), 400
+
+        logger.info(f"🌍 Analyzing population frequency for {chromosome}:{position} {ref_allele}>{alt_allele}")
+
+        # Use population frequency analyzer if available
+        if frequency_analyzer:
+            result = frequency_analyzer.get_variant_frequency(
+                chromosome=chromosome,
+                position=int(position),
+                ref_allele=ref_allele,
+                alt_allele=alt_allele
+            )
+
+            # Check if manual input is needed
+            if result.get('manual_input_needed'):
+                logger.warning(f"⚠️ Manual input needed for frequency lookup")
+                return jsonify({
+                    'manual_input_needed': True,
+                    'prompt': result.get('manual_input_prompt'),
+                    'error': result.get('error', 'All frequency APIs failed')
+                }), 202  # 202 Accepted - needs user input
+
+            logger.info(f"✅ Population frequency analysis complete: {result.get('rarity_category', 'unknown')}")
+            return jsonify(result)
+        else:
+            # NO FAKE DATA IN MEDICAL TOOLS
+            logger.error("Population frequency analysis unavailable - missing dependencies")
+            return jsonify({
+                'error': 'Population frequency analysis unavailable - server dependencies missing. Please contact administrator to install required packages.',
+                'manual_input_needed': True,
+                'prompt': f'What is the population frequency for {chromosome}:{position} {ref_allele}>{alt_allele}?'
+            }), 503
+
+    except Exception as e:
+        logger.error(f"❌ Population frequency analysis failed: {e}")
+        return jsonify({
+            'error': str(e),
+            'manual_input_needed': True,
+            'prompt': f'Error occurred. What is the population frequency for the variant?'
+        }), 500
 
 if __name__ == '__main__':
     print("🧬 Starting HGVS Genetics Analyzer API Server...")

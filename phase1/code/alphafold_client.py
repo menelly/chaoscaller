@@ -36,6 +36,12 @@ class AlphaFoldClient:
     def __init__(self, cache_dir="/mnt/Arcana/genetics_data/alphafold_cache"):
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(exist_ok=True)
+
+        # NEW: Local human proteome directory
+        self.local_proteome_dir = Path("/mnt/Arcana/alphafold_human/structures")
+        self.gene_index_file = Path("/mnt/Arcana/alphafold_human/structures/gene_index.json")
+        self.gene_index = self._load_gene_index()
+
         self.base_url = "https://alphafold.ebi.ac.uk/files"
         self.session = requests.Session()
         self.session.headers.update({
@@ -64,7 +70,71 @@ class AlphaFoldClient:
         """Save cache metadata"""
         with open(self.metadata_file, 'w') as f:
             json.dump(self.metadata, f, indent=2)
+
+    def _load_gene_index(self) -> Dict:
+        """Load gene name to UniProt ID index"""
+        if self.gene_index_file.exists():
+            try:
+                with open(self.gene_index_file, 'r') as f:
+                    return json.load(f)
+            except Exception as e:
+                self.logger.warning(f"⚠️ Could not load gene index: {e}")
+        return {}
     
+    def find_local_structure(self, gene_name: str) -> Optional[str]:
+        """
+        Search for structure in local human proteome by gene name
+
+        Args:
+            gene_name (str): Gene name (e.g., 'MYO7A', 'FKRP')
+
+        Returns:
+            str: Path to local PDB file if found, None otherwise
+        """
+        if not self.local_proteome_dir.exists():
+            self.logger.warning(f"⚠️ Local proteome directory not found: {self.local_proteome_dir}")
+            return None
+
+        # Method 1: Map gene name to UniProt ID and look for structure
+        try:
+            from gene_to_uniprot_mapper import GeneToUniProtMapper
+            mapper = GeneToUniProtMapper()
+            uniprot_id = mapper.get_uniprot_id(gene_name)
+
+            if uniprot_id:
+                # Look for AlphaFold structure file
+                structure_file = self.local_proteome_dir / f"AF-{uniprot_id}-F1-model_v4.pdb.gz"
+                if structure_file.exists():
+                    self.logger.info(f"✅ Found local structure via gene mapping: {gene_name} → {uniprot_id} → {structure_file}")
+                    return str(structure_file)
+                else:
+                    self.logger.info(f"⚠️ UniProt ID found ({uniprot_id}) but no local structure file")
+            else:
+                self.logger.info(f"⚠️ No UniProt ID found for gene {gene_name}")
+
+        except Exception as e:
+            self.logger.warning(f"⚠️ Gene mapping failed: {e}")
+
+        # Method 2: Try gene index if available
+        if self.gene_index:
+            for uniprot_id, pdb_path in self.gene_index.items():
+                if gene_name.upper() in pdb_path.upper():
+                    if os.path.exists(pdb_path):
+                        self.logger.info(f"✅ Found local structure via index: {pdb_path}")
+                        return pdb_path
+
+        # Method 3: Direct file search (fallback)
+        pattern = f"*{gene_name}*"
+        matches = list(self.local_proteome_dir.glob(pattern))
+
+        if matches:
+            structure_file = matches[0]  # Take first match
+            self.logger.info(f"✅ Found local structure via search: {structure_file}")
+            return str(structure_file)
+        else:
+            self.logger.info(f"❌ No local structure found for {gene_name}")
+            return None
+
     def get_structure(self, uniprot_id: str, force_download: bool = False) -> Optional[str]:
         """
         Retrieve protein structure by UniProt ID

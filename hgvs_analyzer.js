@@ -255,6 +255,7 @@ class HGVSGeneticsAnalyzer {
 
     async parseHGVS() {
         const hgvsInput = document.getElementById('hgvs').value;
+        const genomicCoordInput = document.getElementById('genomic-coord').value.trim();
         const build = document.getElementById('build').value;
 
         // Try Franklin format first: "NM_024301.5 FKRP c.826C>A p.Leu276Ile"
@@ -281,6 +282,9 @@ class HGVSGeneticsAnalyzer {
         }
 
         console.log(`🧬 Final HGVS for API: ${hgvs}`);
+        if (genomicCoordInput) {
+            console.log(`🗺️ User provided genomic coordinate: ${genomicCoordInput}`);
+        }
         this.updateStepStatus(1, 'pending');
 
         try {
@@ -291,7 +295,8 @@ class HGVSGeneticsAnalyzer {
                 },
                 body: JSON.stringify({
                     hgvs: hgvs,
-                    build: build
+                    build: build,
+                    genomic_coordinate: genomicCoordInput || null
                 })
             });
             
@@ -365,38 +370,81 @@ class HGVSGeneticsAnalyzer {
         this.updateStepStatus(3, 'pending');
         
         try {
-            // Use the original frequency API with extracted alleles
-            const response = await fetch('http://localhost:4999/api/frequency', {
+            // Use the population frequency API with extracted alleles
+            const response = await fetch('http://localhost:4998/api/population_frequency', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    coordinate: hgvsInfo.genomic_coordinate,
-                    ref: hgvsInfo.ref_allele,
-                    alt: hgvsInfo.alt_allele
+                    chromosome: hgvsInfo.genomic_coordinate.split(':')[0], // Extract "chrX" from "chrX:154534362"
+                    position: parseInt(hgvsInfo.genomic_coordinate.split(':')[1]), // Extract 154534362
+                    ref_allele: hgvsInfo.ref_allele,
+                    alt_allele: hgvsInfo.alt_allele
                 })
             });
             
+            const data = await response.json();
+
+            // Handle manual input needed (202 response)
+            if (response.status === 202 && data.manual_input_needed) {
+                console.log('🆘 Manual input needed:', data.prompt);
+
+                // Prompt user for frequency input
+                const userFrequency = prompt(data.prompt + '\n\nEnter frequency as decimal (e.g., 0.001 for 0.1%):');
+
+                if (userFrequency !== null && !isNaN(parseFloat(userFrequency))) {
+                    const frequency = parseFloat(userFrequency);
+
+                    // Create manual frequency data
+                    const manualData = {
+                        global_af: frequency,
+                        population_afs: {},
+                        rarity_category: this.categorizeFrequency(frequency),
+                        manual_input: true,
+                        source: 'manual_input',
+                        ref_allele: hgvsInfo.ref_allele,
+                        alt_allele: hgvsInfo.alt_allele
+                    };
+
+                    this.analysisData.frequency = manualData;
+                    this.showResults(3, manualData);
+                    this.updateStepStatus(3, 'success');
+
+                    console.log('✅ Manual frequency input complete:', manualData.rarity_category);
+                } else {
+                    console.log('❌ Manual input cancelled or invalid');
+                    this.updateStepStatus(3, 'error');
+                }
+                return;
+            }
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
-            const data = await response.json();
-            
+
             // Add allele info for display
             data.ref_allele = hgvsInfo.ref_allele;
             data.alt_allele = hgvsInfo.alt_allele;
-            
+
             this.analysisData.frequency = data;
             this.showResults(3, data);
             this.updateStepStatus(3, 'success');
-            
-            console.log('✅ Frequency analysis complete:', data.category);
+
+            console.log('✅ Frequency analysis complete:', data.rarity_category);
         } catch (error) {
             console.error('❌ Frequency analysis failed:', error);
             this.updateStepStatus(3, 'error');
         }
+    }
+
+    categorizeFrequency(frequency) {
+        if (frequency < 0.00001) return 'ultra_rare';
+        if (frequency < 0.0001) return 'very_rare';
+        if (frequency < 0.001) return 'rare';
+        if (frequency < 0.01) return 'uncommon';
+        if (frequency < 0.05) return 'common';
+        return 'very_common';
     }
 
     async getProteinInfo() {
@@ -411,20 +459,21 @@ class HGVSGeneticsAnalyzer {
         this.updateStepStatus(4, 'pending');
         
         try {
-            // Mock protein lookup for now - would use UniProt API
-            await this.delay(1000);
-            
-            const mockData = {
-                uniprot_id: geneName === 'DEMO_GENE_A' ? 'P12345' : 'Unknown',
-                protein_name: geneName === 'DEMO_GENE_A' ? 'Demo protein A' : `${geneName} protein`,
-                protein_function: geneName === 'DEMO_GENE_A' ? 'Example protein function for demo purposes' : 'Function unknown'
-            };
-            
-            this.analysisData.proteinInfo = mockData;
-            this.showResults(4, mockData);
-            this.updateStepStatus(4, 'success');
-            
-            console.log('✅ Protein info complete');
+            // NO FAKE PROTEIN DATA - need real UniProt API integration
+            console.error('❌ Protein information lookup not yet implemented');
+            this.updateStepStatus(4, 'error');
+
+            // Show error message to user
+            const resultsDiv = document.getElementById('step4-results');
+            resultsDiv.innerHTML = `
+                <div style="color: #ff6b6b; padding: 10px; background: rgba(255,107,107,0.1); border-radius: 6px;">
+                    <strong>⚠️ Protein Information Unavailable</strong><br>
+                    UniProt API integration required for protein data lookup.
+                    Contact administrator to enable this feature.
+                </div>
+            `;
+            resultsDiv.style.display = 'block';
+
         } catch (error) {
             console.error('❌ Protein info failed:', error);
             this.updateStepStatus(4, 'error');

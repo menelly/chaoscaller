@@ -39,16 +39,24 @@
             <div class="step-content">
                 <div class="input-group">
                     <label for="hgvs">HGVS Notation:</label>
-                    <input type="text" id="hgvs" placeholder="NM_123456.1:c.123G>A" value="">
+                    <input type="text" id="hgvs" placeholder="NM_024301.5:c.826C>A" value="">
                     <select id="build">
                         <option value="hg38">GRCh38/hg38</option>
                         <option value="hg19">GRCh37/hg19</option>
                     </select>
                 </div>
+
+                <div class="input-group" style="margin-top: 10px;">
+                    <label for="genomic-coord">Genomic Coordinate (Optional):</label>
+                    <input type="text" id="genomic-coord" placeholder="chr19:47267094 (if known)" value="">
+                    <small style="color: #888; font-size: 0.85em;">
+                        💡 If you have the genomic coordinate, enter it to skip API lookup delays
+                    </small>
+                </div>
                 <div class="hgvs-examples">
-                    <p><strong>Examples:</strong></p>
-                    <button class="example-btn" onclick="fillExample('NM_123456.1:c.123G>A')">Example Gene 1</button>
-                    <button class="example-btn" onclick="fillExample('NM_654321.2:c.456C>T')">Example Gene 2</button>
+                    <p><strong>Real Examples:</strong></p>
+                    <button class="example-btn" onclick="fillExample('NM_024301.5:c.826C>A', 'chr19:47267094')">FKRP c.826C>A</button>
+                    <button class="example-btn" onclick="fillExample('NM_000059.3:c.1521_1523delCTT', 'chr13:32315474')">BRCA2 Deletion</button>
                 </div>
                 <button class="action-btn primary" id="parseHGVS">
                     <i class="fas fa-search"></i> Parse HGVS
@@ -247,5 +255,12 @@
     </footer>
 
     <script src="hgvs_analyzer.js"></script>
+    <script>
+        function fillExample(hgvs, genomicCoord = '') {
+            document.getElementById('hgvs').value = hgvs;
+            document.getElementById('genomic-coord').value = genomicCoord;
+            console.log(`📝 Filled example: ${hgvs} → ${genomicCoord}`);
+        }
+    </script>
 </body>
 </html>

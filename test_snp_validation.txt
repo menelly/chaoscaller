@@ -1,0 +1,346 @@
+1722508 5	rs2533046082	Pathogenic: Charcot-Marie-Tooth Disease, Demyelinating, Type 1J	33,667,921(+)	NM_002224.4(ITPR3):c.1843G>A (p.Val615Met)	G/A	V615M	missense variant
+1722510 5	rs1561875704	"Pathogenic/Likely pathogenic: not provided
+Likely pathogenic: Charcot-Marie-Tooth Disease, Demyelinating, Type 1J"	33,680,375(+)	NM_002224.4(ITPR3):c.4271C>T (p.Thr1424Met)	C/T	T1424M	missense variant
+1722509 5	rs2533186607	"Likely pathogenic: not provided ; ITPR3-related disorder
+Conflicting interpretations of pathogenicity: Charcot-Marie-Tooth Disease, Demyelinating, Type 1J"	33,692,839(+)	NM_002224.4(ITPR3):c.7570C>T (p.Arg2524Cys)	C/T	R2524C	missense variant
+2578246 5	rs1237600471	"Likely pathogenic: Charcot-Marie-Tooth Disease, Demyelinating, Type 1J
+Uncertain significance: not provided"	33,658,745(+)	NM_002224.4(ITPR3):c.445C>T (p.Arg149Trp)	C/T	R149W	missense variant
+1316989 5	rs1765221518	Uncertain significance: not provided	33,686,073(+)	NM_002224.4(ITPR3):c.5688C>A (p.Asn1896Lys)	C/A	N1896K	missense variant
+1369468 5	rs763353037	Uncertain significance: not provided	33,685,435(+)	NM_002224.4(ITPR3):c.5384G>A (p.Arg1795Gln)	G/A	R1795Q	missense variant
+1704834 5	rs2533025237	Uncertain significance: not provided	33,663,866(+)	NM_002224.4(ITPR3):c.1134C>G (p.Asp378Glu)	C/G	D378E	missense variant
+1708758 5	rs2533111196	Uncertain significance: not provided	33,680,102(+)	NM_002224.4(ITPR3):c.4193C>T (p.Ser1398Phe)	C/T	S1398F	missense variant
+1809858 5	rs2533157836	Uncertain significance: not provided	33,688,073(+)	NM_002224.4(ITPR3):c.6281A>C (p.Lys2094Thr)	A/C	K2094T	missense variant
+2064421 5	rs374105933	Uncertain significance: not provided	33,685,506(+)	NM_002224.4(ITPR3):c.5455C>T (p.Arg1819Cys)	C/T	R1819C	missense variant
+2216906 5	rs375861481	Uncertain significance: not specified	33,684,659(+)	NM_002224.4(ITPR3):c.5108G>A (p.Arg1703Gln)	G/A	R1703Q	missense variant
+2218315 5	rs746216904	Uncertain significance: not specified	33,670,503(+)	NM_002224.4(ITPR3):c.2368C>T (p.Pro790Ser)	C/T	P790S	missense variant
+2221292 5	rs375939280	Uncertain significance: not specified	33,672,067(+)	NM_002224.4(ITPR3):c.2767A>G (p.Met923Val)	A/G	M923V	missense variant
+2228450 5	rs760310772	Uncertain significance: not specified	33,680,567(+)	NM_002224.4(ITPR3):c.4363C>T (p.Arg1455Cys)	C/T	R1455C	missense variant
+2230280 5	rs547973498	Uncertain significance: not specified	33,684,165(+)	NM_002224.4(ITPR3):c.4934C>T (p.Ser1645Phe)	C/T	S1645F	missense variant
+2230469 5	rs778763046	Uncertain significance: not specified	33,686,101(+)	NM_002224.4(ITPR3):c.5716G>C (p.Glu1906Gln)	G/C	E1906Q	missense variant
+2233426 5	rs767262128	Uncertain significance: not specified	33,671,231(+)	NM_002224.4(ITPR3):c.2653A>G (p.Thr885Ala)	A/G	T885A	missense variant
+2238354 5	rs2533167864	Uncertain significance: not specified	33,689,364(+)	NM_002224.4(ITPR3):c.6821A>G (p.Tyr2274Cys)	A/G	Y2274C	missense variant
+2239173 5	rs371697389	Uncertain significance: not specified	33,688,126(+)	NM_002224.4(ITPR3):c.6334G>A (p.Asp2112Asn)	G/A	D2112N	missense variant
+2241831 5	rs1387840577	Uncertain significance: not specified	33,688,071(+)	NM_002224.4(ITPR3):c.6279C>G (p.Asn2093Lys)	C/G	N2093K	missense variant
+2243214 5	rs1765225340	Uncertain significance: not specified	33,686,219(+)	NM_002224.4(ITPR3):c.5834C>T (p.Thr1945Ile)	C/T	T1945I	missense variant
+2244784 5	rs377722337	Uncertain significance: not specified	33,691,044(+)	NM_002224.4(ITPR3):c.7160G>C (p.Gly2387Ala)	G/C	G2387A	missense variant
+2248825 5	rs1254978540	Uncertain significance: not specified	33,691,104(+)	NM_002224.4(ITPR3):c.7220C>T (p.Ser2407Phe)	C/T	S2407F	missense variant
+2249262 5	rs1158503419	Uncertain significance: not specified	33,663,868(+)	NM_002224.4(ITPR3):c.1136C>T (p.Ser379Phe)	C/T	S379F	missense variant
+2256149 5	rs749441437	Uncertain significance: not specified	33,688,287(+)	NM_002224.4(ITPR3):c.6424G>A (p.Gly2142Ser)	G/A	G2142S	missense variant
+2259737 5	rs754970759	Uncertain significance: not specified	33,672,052(+)	NM_002224.4(ITPR3):c.2752C>G (p.Gln918Glu)	C/G	Q918E	missense variant
+2264875 5	rs746247025	Uncertain significance: not specified	33,655,807(+)	NM_002224.4(ITPR3):c.202C>A (p.Gln68Lys)	C/A	Q68K	missense variant
+2271335 5	rs767392916	Uncertain significance: not specified	33,662,655(+)	NM_002224.4(ITPR3):c.839A>G (p.Asn280Ser)	A/G	N280S	missense variant
+2277648 5	rs150416587	Uncertain significance: not specified	33,675,785(+)	NM_002224.4(ITPR3):c.3211G>T (p.Val1071Phe)	G/T	V1071F	missense variant
+2277917 5	rs1320318877	Uncertain significance: not specified	33,690,077(+)	NM_002224.4(ITPR3):c.6911G>A (p.Arg2304His)	G/A	R2304H	missense variant
+2283433 5	rs1765127377	Uncertain significance: not specified	33,683,261(+)	NM_002224.4(ITPR3):c.4652T>C (p.Met1551Thr)	T/C	M1551T	missense variant
+2283759 5	rs1483809883	Uncertain significance: not specified	33,684,033(+)	NM_002224.4(ITPR3):c.4802C>T (p.Ala1601Val)	C/T	A1601V	missense variant
+2285727 5	rs370503445	Uncertain significance: not specified	33,658,734(+)	NM_002224.4(ITPR3):c.434A>G (p.Lys145Arg)	A/G	K145R	missense variant
+2288445 5	rs2533100693	Uncertain significance: not specified	33,678,428(+)	NM_002224.4(ITPR3):c.3656C>G (p.Ala1219Gly)	C/G	A1219G	missense variant
+2292214 5	rs2533144337	Uncertain significance: not specified	33,685,753(+)	NM_002224.4(ITPR3):c.5593A>C (p.Thr1865Pro)	A/C	T1865P	missense variant
+2296839 5	rs139957730	Uncertain significance: not specified	33,685,729(+)	NM_002224.4(ITPR3):c.5569C>T (p.Arg1857Cys)	C/T	R1857C	missense variant
+2297182 5	rs770254420	Uncertain significance: not specified	33,670,519(+)	NM_002224.4(ITPR3):c.2384C>T (p.Thr795Met)	C/T	T795M	missense variant
+2300160 5	rs2533159705	Uncertain significance: not specified	33,688,288(+)	NM_002224.4(ITPR3):c.6425G>A (p.Gly2142Asp)	G/A	G2142D	missense variant
+2304031 5	rs781437682	Uncertain significance: not specified	33,677,526(+)	NM_002224.4(ITPR3):c.3545T>A (p.Met1182Lys)	T/A	M1182K	missense variant
+2315953 5	rs867921739	Uncertain significance: not specified	33,685,503(+)	NM_002224.4(ITPR3):c.5452G>A (p.Asp1818Asn)	G/A	D1818N	missense variant
+2328710 5	rs1561873013	Uncertain significance: not specified	33,676,844(+)	NM_002224.4(ITPR3):c.3359T>C (p.Met1120Thr)	T/C	M1120T	missense variant
+2329189 5	rs370524230	Uncertain significance: not specified	33,687,232(+)	NM_002224.4(ITPR3):c.6082G>A (p.Val2028Ile)	G/A	V2028I	missense variant
+2330583 5	rs2533103048	Uncertain significance: not specified	33,678,659(+)	NM_002224.4(ITPR3):c.3792G>A (p.Met1264Ile)	G/A	M1264I	missense variant
+2330790 5	rs201031155	Uncertain significance: not specified	33,670,673(+)	NM_002224.4(ITPR3):c.2444A>G (p.Tyr815Cys)	A/G	Y815C	missense variant
+2333111 5	rs762664991	Uncertain significance: not specified	33,687,054(+)	NM_002224.4(ITPR3):c.6025G>A (p.Asp2009Asn)	G/A	D2009N	missense variant
+2333271 5	rs1375131305	Uncertain significance: not specified	33,670,434(+)	NM_002224.4(ITPR3):c.2299G>A (p.Glu767Lys)	G/A	E767K	missense variant
+2334297 5	rs760333138	Uncertain significance: not specified	33,659,520(+)	NM_002224.4(ITPR3):c.682C>G (p.Arg228Gly)	C/G	R228G	missense variant
+2335713 5	rs756219025	Uncertain significance: not specified	33,687,320(+)	NM_002224.4(ITPR3):c.6170C>T (p.Ala2057Val)	C/T	A2057V	missense variant
+2345476 5	rs200180514	"Uncertain significance: Charcot-Marie-Tooth Disease, Demyelinating, Type 1J ; not specified
+Benign: not provided"	33,680,127(+)	NM_002224.4(ITPR3):c.4218C>G (p.Ile1406Met)	C/G	I1406M	missense variant
+2350507 5	rs769711971	Uncertain significance: not specified	33,679,967(+)	NM_002224.4(ITPR3):c.4058G>A (p.Arg1353His)	G/A	R1353H	missense variant
+2354299 5	rs747313389	Uncertain significance: not specified	33,691,692(+)	NM_002224.4(ITPR3):c.7303G>C (p.Gly2435Arg)	G/C	G2435R	missense variant
+2354608 5	rs763520343	Uncertain significance: not specified	33,688,120(+)	NM_002224.4(ITPR3):c.6328G>A (p.Glu2110Lys)	G/A	E2110K	missense variant
+2355679 5	rs746407544	Uncertain significance: not specified	33,682,566(+)	NM_002224.4(ITPR3):c.4519C>T (p.Arg1507Cys)	C/T	R1507C	missense variant
+2360974 5	rs140192992	Uncertain significance: not specified	33,686,493(+)	NM_002224.4(ITPR3):c.5953C>T (p.Arg1985Cys)	C/T	R1985C	missense variant
+2364961 5	rs779093566	Uncertain significance: not specified	33,662,583(+)	NM_002224.4(ITPR3):c.767A>G (p.Glu256Gly)	A/G	E256G	missense variant
+2370115 5	rs1355114188	Uncertain significance: not specified	33,669,105(+)	NM_002224.4(ITPR3):c.2138A>T (p.Gln713Leu)	A/T	Q713L	missense variant
+2377132 5	rs200715853	Uncertain significance: not specified	33,687,311(+)	NM_002224.4(ITPR3):c.6161A>G (p.Tyr2054Cys)	A/G	Y2054C	missense variant
+2377995 5	rs151088791	Uncertain significance: not specified	33,659,105(+)	NM_002224.4(ITPR3):c.613G>A (p.Ala205Thr)	G/A	A205T	missense variant
+2380108 5	rs142457410	Uncertain significance: not specified	33,684,679(+)	NM_002224.4(ITPR3):c.5128A>C (p.Ile1710Leu)	A/C	I1710L	missense variant
+2384096 5	rs112448999	Uncertain significance: not specified	33,686,416(+)	NM_002224.4(ITPR3):c.5876T>C (p.Ile1959Thr)	T/C	I1959T	missense variant
+2388400 5	rs368516873	Uncertain significance: not specified	33,670,702(+)	NM_002224.4(ITPR3):c.2473G>C (p.Asp825His)	G/C	D825H	missense variant
+2388613 5	rs200910400	Uncertain significance: not specified	33,668,974(+)	NM_002224.4(ITPR3):c.2007G>C (p.Glu669Asp)	G/C	E669D	missense variant
+2388810 5	rs201726270	Uncertain significance: not specified	33,621,627(+)	NM_002224.4(ITPR3):c.25C>T (p.His9Tyr)	C/T	H9Y	missense variant
+2389320 5	rs768879198	Uncertain significance: not specified	33,667,186(+)	NM_002224.4(ITPR3):c.1609C>T (p.Arg537Trp)	C/T	R537W	missense variant
+2394775 5	rs543022357	Uncertain significance: not specified	33,671,300(+)	NM_002224.4(ITPR3):c.2722C>A (p.Pro908Thr)	C/A	P908T	missense variant
+2397262 5	rs771869292	Uncertain significance: not specified	33,669,111(+)	NM_002224.4(ITPR3):c.2144C>T (p.Ala715Val)	C/T	A715V	missense variant
+2397918 5	rs146942977	Uncertain significance: not specified	33,640,524(+)	NM_002224.4(ITPR3):c.130G>C (p.Asp44His)	G/C	D44H	missense variant
+2400239 5	rs761705972	Uncertain significance: not specified	33,691,635(+)	NM_002224.4(ITPR3):c.7246C>G (p.His2416Asp)	C/G	H2416D	missense variant
+2402906 5	rs200382899	Uncertain significance: not specified	33,671,270(+)	NM_002224.4(ITPR3):c.2692C>A (p.Pro898Thr)	C/A	P898T	missense variant
+2430203 5	rs760345523	Uncertain significance: Charcot-Marie-Tooth Disease, Demyelinating, Type 1J	33,688,254(+)	NM_002224.4(ITPR3):c.6391C>T (p.Arg2131Cys)	C/T	R2131C	missense variant
+2430476 5	rs967128309	Uncertain significance: not provided	33,685,777(+)	NM_002224.4(ITPR3):c.5617A>G (p.Ile1873Val)	A/G	I1873V	missense variant
+2457813 5	rs200159806	Uncertain significance: not specified	33,685,444(+)	NM_002224.4(ITPR3):c.5393A>G (p.Gln1798Arg)	A/G	Q1798R	missense variant
+2457875 5	rs866221796	Uncertain significance: not specified	33,678,536(+)	NM_002224.4(ITPR3):c.3764C>T (p.Thr1255Met)	C/T	T1255M	missense variant
+2458253 5	rs146607771	Uncertain significance: not specified	33,691,807(+)	NM_002224.4(ITPR3):c.7337G>A (p.Arg2446Lys)	G/A	R2446K	missense variant
+2459547 5	rs147003223	Uncertain significance: not specified	33,693,647(+)	NM_002224.4(ITPR3):c.7727G>A (p.Arg2576His)	G/A	R2576H	missense variant
+2462543 5	rs139781035	Uncertain significance: not specified	33,691,699(+)	NM_002224.4(ITPR3):c.7310C>T (p.Ser2437Leu)	C/T	S2437L	missense variant
+2464990 5	rs200123519	Uncertain significance: not specified	33,655,771(+)	NM_002224.4(ITPR3):c.166C>G (p.Leu56Val)	C/G	L56V	missense variant
+2465802 5	rs775802536	Uncertain significance: not specified	33,678,455(+)	NM_002224.4(ITPR3):c.3683C>T (p.Thr1228Met)	C/T	T1228M	missense variant
+2475967 5	rs1764354921	Uncertain significance: not specified	33,657,971(+)	NM_002224.4(ITPR3):c.322A>G (p.Asn108Asp)	A/G	N108D	missense variant
+2478407 5	rs2127271545	Uncertain significance: not specified	33,663,861(+)	NM_002224.4(ITPR3):c.1129A>C (p.Thr377Pro)	A/C	T377P	missense variant
+2479249 5	rs907128855	Uncertain significance: not specified	33,683,339(+)	NM_002224.4(ITPR3):c.4730C>T (p.Pro1577Leu)	C/T	P1577L	missense variant
+2480373 5	rs1764630575	Uncertain significance: not specified	33,667,168(+)	NM_002224.4(ITPR3):c.1591G>T (p.Gly531Cys)	G/T	G531C	missense variant
+2482191 5	rs373777173	Uncertain significance: not specified	33,669,114(+)	NM_002224.4(ITPR3):c.2147G>A (p.Arg716Gln)	G/A	R716Q	missense variant
+2485853 5	rs2533138447	Uncertain significance: not specified	33,684,795(+)	NM_002224.4(ITPR3):c.5159C>T (p.Ala1720Val)	C/T	A1720V	missense variant
+2495661 5	rs921999752	Uncertain significance: not specified	33,687,097(+)	NM_002224.4(ITPR3):c.6068A>G (p.Gln2023Arg)	A/G	Q2023R	missense variant
+2496176 5	rs931618036	Uncertain significance: not specified	33,677,532(+)	NM_002224.4(ITPR3):c.3551G>A (p.Gly1184Glu)	G/A	G1184E	missense variant
+2516367 5	rs544003324	Uncertain significance: not specified	33,678,493(+)	NM_002224.4(ITPR3):c.3721G>A (p.Gly1241Ser)	G/A	G1241S	missense variant
+2518904 5	rs570759538	Uncertain significance: not specified	33,684,683(+)	NM_002224.4(ITPR3):c.5132G>A (p.Gly1711Asp)	G/A	G1711D	missense variant
+2520161 5	rs527680438	Uncertain significance: not specified	33,674,253(+)	NM_002224.4(ITPR3):c.3104T>C (p.Met1035Thr)	T/C	M1035T	missense variant
+2521136 5	rs760658664	Uncertain significance: not specified	33,687,230(+)	NM_002224.4(ITPR3):c.6080A>G (p.Asp2027Gly)	A/G	D2027G	missense variant
+2522193 5	rs369824854	Uncertain significance: not specified	33,663,759(+)	NM_002224.4(ITPR3):c.1027C>T (p.Arg343Cys)	C/T	R343C	missense variant
+2523091 5	rs531085782	Uncertain significance: not specified	33,685,817(+)	NM_002224.4(ITPR3):c.5657G>A (p.Arg1886Gln)	G/A	R1886Q	missense variant
+2525048 5	rs745551337	Uncertain significance: not specified	33,668,978(+)	NM_002224.4(ITPR3):c.2011C>T (p.Arg671Trp)	C/T	R671W	missense variant
+2531723 5	rs2533092512	Uncertain significance: not specified	33,676,891(+)	NM_002224.4(ITPR3):c.3406G>A (p.Gly1136Ser)	G/A	G1136S	missense variant
+2533806 5	rs747313389	Uncertain significance: not specified	33,691,692(+)	NM_002224.4(ITPR3):c.7303G>A (p.Gly2435Arg)	G/A	G2435R	missense variant
+2534518 5	rs368822884	Uncertain significance: not specified	33,679,963(+)	NM_002224.4(ITPR3):c.4054G>A (p.Ala1352Thr)	G/A	A1352T	missense variant
+2534832 5	rs2533088283	Uncertain significance: not specified	33,675,855(+)	NM_002224.4(ITPR3):c.3281A>G (p.Gln1094Arg)	A/G	Q1094R	missense variant
+2535233 5	rs922527523	Uncertain significance: not specified	33,678,720(+)	NM_002224.4(ITPR3):c.3853C>T (p.His1285Tyr)	C/T	H1285Y	missense variant
+2537181 5	rs147761562	Uncertain significance: not specified	33,692,876(+)	NM_002224.4(ITPR3):c.7607C>T (p.Thr2536Met)	C/T	T2536M	missense variant
+2555158 5	rs2533157766	Uncertain significance: not specified	33,688,057(+)	NM_002224.4(ITPR3):c.6265C>T (p.Leu2089Phe)	C/T	L2089F	missense variant
+2556616 5	rs771707607	Uncertain significance: not specified	33,685,646(+)	NM_002224.4(ITPR3):c.5486G>T (p.Arg1829Leu)	G/T	R1829L	missense variant
+2557336 5	rs765845561	Uncertain significance: not specified	33,664,950(+)	NM_002224.4(ITPR3):c.1229A>G (p.Glu410Gly)	A/G	E410G	missense variant
+2559793 5	rs1411939138	Uncertain significance: not specified	33,695,776(+)	NM_002224.4(ITPR3):c.8012G>A (p.Arg2671His)	G/A	R2671H	missense variant
+2564134 5	rs770680251	Uncertain significance: not specified	33,685,784(+)	NM_002224.4(ITPR3):c.5624G>A (p.Arg1875His)	G/A	R1875H	missense variant
+2570418 5	rs201052446	Uncertain significance: not specified	33,663,522(+)	NM_002224.4(ITPR3):c.977A>G (p.Asp326Gly)	A/G	D326G	missense variant
+2575780 5	rs937655006	Uncertain significance: not provided	33,678,446(+)	NM_002224.4(ITPR3):c.3674T>G (p.Leu1225Arg)	T/G	L1225R	missense variant
+2578323 5	rs2533176151	Uncertain significance: not provided	33,691,031(+)	NM_002224.4(ITPR3):c.7147T>C (p.Phe2383Leu)	T/C	F2383L	missense variant
+2579482 5	rs2532982303	Uncertain significance: not provided	33,655,780(+)	NM_002224.4(ITPR3):c.175G>A (p.Val59Met)	G/A	V59M	missense variant
+2580899 5	rs754127262	Uncertain significance: not provided	33,672,049(+)	NM_002224.4(ITPR3):c.2749A>C (p.Ile917Leu)	A/C	I917L	missense variant
+2590838 5	rs775672173	Uncertain significance: not specified	33,691,857(+)	NM_002224.4(ITPR3):c.7387G>A (p.Val2463Ile)	G/A	V2463I	missense variant
+2591404 5	rs370516286	Uncertain significance: not specified	33,691,085(+)	NM_002224.4(ITPR3):c.7201C>T (p.Arg2401Trp)	C/T	R2401W	missense variant
+2592372 5	rs373241450	Uncertain significance: not specified	33,676,912(+)	NM_002224.4(ITPR3):c.3427G>A (p.Ala1143Thr)	G/A	A1143T	missense variant
+2598684 5	rs149624360	Uncertain significance: not specified	33,680,113(+)	NM_002224.4(ITPR3):c.4204C>T (p.His1402Tyr)	C/T	H1402Y	missense variant
+2599248 5	rs368890268	Uncertain significance: not specified	33,667,961(+)	NM_002224.4(ITPR3):c.1883C>T (p.Pro628Leu)	C/T	P628L	missense variant
+2600124 5	rs760889552	Uncertain significance: not specified	33,683,234(+)	NM_002224.4(ITPR3):c.4625T>C (p.Met1542Thr)	T/C	M1542T	missense variant
+2610482 5	rs1561869565	Uncertain significance: not specified	33,671,190(+)	NM_002224.4(ITPR3):c.2612T>C (p.Ile871Thr)	T/C	I871T	missense variant
+2614972 5	rs764750465	Uncertain significance: not specified	33,695,775(+)	NM_002224.4(ITPR3):c.8011C>T (p.Arg2671Cys)	C/T	R2671C	missense variant
+2621175 5	rs763726545	Uncertain significance: not specified	33,680,636(+)	NM_002224.4(ITPR3):c.4432G>T (p.Ala1478Ser)	G/T	A1478S	missense variant
+2656497 5	rs1764920835	Uncertain significance: not provided	33,676,876(+)	NM_002224.4(ITPR3):c.3391A>C (p.Lys1131Gln)	A/C	K1131Q	missense variant
+2662875 5	rs2532999434	Uncertain significance: not provided	33,659,055(+)	NM_002224.4(ITPR3):c.563T>G (p.Val188Gly)	T/G	V188G	missense variant
+2718076 5	rs2533058869	Uncertain significance: not provided	33,670,426(+)	NM_002224.4(ITPR3):c.2291T>C (p.Met764Thr)	T/C	M764T	missense variant
+2753917 5	rs2533142321	Uncertain significance: not provided	33,685,462(+)	NM_002224.4(ITPR3):c.5411T>C (p.Val1804Ala)	T/C	V1804A	missense variant
+3025804 5	rs138851075	Uncertain significance: not provided	33,695,739(+)	NM_002224.4(ITPR3):c.7975C>T (p.Arg2659Cys)	C/T	R2659C	missense variant
+3032221 5	rs767498144	Uncertain significance: ITPR3-related disorder	33,682,635(+)	NM_002224.4(ITPR3):c.4588G>C (p.Ala1530Pro)	G/C	A1530P	missense variant
+3054815 5	rs780191202	Uncertain significance: ITPR3-related disorder	33,685,485(+)	NM_002224.4(ITPR3):c.5434G>A (p.Gly1812Ser)	G/A	G1812S	missense variant
+3068221 5	rs764696741	Uncertain significance: Charcot-Marie-Tooth Disease, Demyelinating, Type 1J	33,662,546(+)	NM_002224.4(ITPR3):c.730T>C (p.Phe244Leu)	T/C	F244L	missense variant
+3111782 5	rs773041390	Uncertain significance: not specified	33,621,614(+)	NM_002224.4(ITPR3):c.12G>A (p.Met4Ile)	G/A	M4I	missense variant
+3111783 5	rs764206591	Uncertain significance: not specified	33,665,939(+)	NM_002224.4(ITPR3):c.1514G>A (p.Arg505Gln)	G/A	R505Q	missense variant
+3111784 5	rs774345255	Uncertain significance: not specified	33,667,187(+)	NM_002224.4(ITPR3):c.1610G>A (p.Arg537Gln)	G/A	R537Q	missense variant
+3111785 5	rs376588706	Uncertain significance: not specified	33,667,918(+)	NM_002224.4(ITPR3):c.1840G>A (p.Glu614Lys)	G/A	E614K	missense variant
+3111786 5	rs568408618	Uncertain significance: not specified	33,667,954(+)	NM_002224.4(ITPR3):c.1876C>T (p.Arg626Trp)	C/T	R626W	missense variant
+3111787 5	rs776399344	Uncertain significance: not specified	33,670,383(+)	NM_002224.4(ITPR3):c.2248G>A (p.Glu750Lys)	G/A	E750K	missense variant
+3111788 5	rs1230942701	Uncertain significance: not specified	33,671,292(+)	NM_002224.4(ITPR3):c.2714A>G (p.Tyr905Cys)	A/G	Y905C	missense variant
+3111789 5	rs768421731	Uncertain significance: not specified	33,672,103(+)	NM_002224.4(ITPR3):c.2803G>A (p.Val935Ile)	G/A	V935I	missense variant
+3111790 5	rs373625572	Uncertain significance: not specified	33,672,205(+)	NM_002224.4(ITPR3):c.2905C>A (p.Leu969Met)	C/A	L969M	missense variant
+3111791 5	rs1764830240	Uncertain significance: not specified	33,673,684(+)	NM_002224.4(ITPR3):c.3022G>T (p.Gly1008Trp)	G/T	G1008W	missense variant
+3111792 5	rs1227210851	Uncertain significance: not specified	33,673,697(+)	NM_002224.4(ITPR3):c.3035C>T (p.Thr1012Ile)	C/T	T1012I	missense variant
+3111793 5	rs1219402225	Uncertain significance: not specified	33,674,225(+)	NM_002224.4(ITPR3):c.3076G>C (p.Asp1026His)	G/C	D1026H	missense variant
+3111794 5	rs761564849	Uncertain significance: not specified	33,675,746(+)	NM_002224.4(ITPR3):c.3172G>A (p.Val1058Met)	G/A	V1058M	missense variant
+3111795 5	rs1425382314	Uncertain significance: not specified	33,675,780(+)	NM_002224.4(ITPR3):c.3206C>T (p.Pro1069Leu)	C/T	P1069L	missense variant
+3111796 5	rs778621027	Uncertain significance: not specified	33,677,056(+)	NM_002224.4(ITPR3):c.3489G>C (p.Glu1163Asp)	G/C	E1163D	missense variant
+3111798 5	rs577112801	Uncertain significance: not specified	33,684,816(+)	NM_002224.4(ITPR3):c.5180G>A (p.Arg1727Gln)	G/A	R1727Q	missense variant
+3111799 5	rs759538163	Uncertain significance: not specified	33,685,654(+)	NM_002224.4(ITPR3):c.5494T>G (p.Ser1832Ala)	T/G	S1832A	missense variant
+3111800 5	rs765123685	Uncertain significance: not specified	33,685,658(+)	NM_002224.4(ITPR3):c.5498T>C (p.Phe1833Ser)	T/C	F1833S	missense variant
+3111801 5	rs762744830	Uncertain significance: not specified	33,685,714(+)	NM_002224.4(ITPR3):c.5554C>T (p.His1852Tyr)	C/T	H1852Y	missense variant
+3111802 5	rs746738046	Uncertain significance: not specified	33,686,213(+)	NM_002224.4(ITPR3):c.5828C>G (p.Thr1943Ser)	C/G	T1943S	missense variant
+3111803 5	rs1765232812	Uncertain significance: not specified	33,686,440(+)	NM_002224.4(ITPR3):c.5900T>C (p.Ile1967Thr)	T/C	I1967T	missense variant
+3111804 5	rs370524230	Uncertain significance: not specified	33,687,232(+)	NM_002224.4(ITPR3):c.6082G>C (p.Val2028Leu)	G/C	V2028L	missense variant
+3111806 5	rs140217812	Uncertain significance: not specified	33,687,542(+)	NM_002224.4(ITPR3):c.6242A>C (p.Glu2081Ala)	A/C	E2081A	missense variant
+3111807 5	rs760884548	Uncertain significance: not specified	33,687,547(+)	NM_002224.4(ITPR3):c.6247G>A (p.Glu2083Lys)	G/A	E2083K	missense variant
+3111808 5	rs149855450	Uncertain significance: not specified	33,689,316(+)	NM_002224.4(ITPR3):c.6773G>A (p.Arg2258His)	G/A	R2258H	missense variant
+3111809 5	rs143484125	Uncertain significance: not specified	33,690,076(+)	NM_002224.4(ITPR3):c.6910C>T (p.Arg2304Cys)	C/T	R2304C	missense variant
+3111810 5	rs750625409	Uncertain significance: not specified	33,690,092(+)	NM_002224.4(ITPR3):c.6926G>C (p.Arg2309Pro)	G/C	R2309P	missense variant
+3111811 5	rs770590508	Uncertain significance: not specified	33,691,040(+)	NM_002224.4(ITPR3):c.7156G>A (p.Val2386Ile)	G/A	V2386I	missense variant
+3111812 5	rs531503671	Uncertain significance: not specified	33,691,672(+)	NM_002224.4(ITPR3):c.7283A>T (p.Asp2428Val)	A/T	D2428V	missense variant
+3111813 5	rs753605217	Uncertain significance: not specified	33,693,586(+)	NM_002224.4(ITPR3):c.7666G>A (p.Glu2556Lys)	G/A	E2556K	missense variant
+3111815 5	rs376639833	Uncertain significance: not specified	33,694,954(+)	NM_002224.4(ITPR3):c.7816C>G (p.Arg2606Gly)	C/G	R2606G	missense variant
+3111816 5	rs148037665	Uncertain significance: not specified	33,694,955(+)	NM_002224.4(ITPR3):c.7817G>A (p.Arg2606Gln)	G/A	R2606Q	missense variant
+3111817 5	rs376985459	Uncertain significance: not specified	33,695,725(+)	NM_002224.4(ITPR3):c.7961G>A (p.Arg2654Gln)	G/A	R2654Q	missense variant
+3111818 5	rs1764531422	Uncertain significance: not specified	33,663,531(+)	NM_002224.4(ITPR3):c.986A>T (p.Asp329Val)	A/T	D329V	missense variant
+3111819 5	rs368801277	Uncertain significance: not specified	33,663,533(+)	NM_002224.4(ITPR3):c.988C>T (p.Pro330Ser)	C/T	P330S	missense variant
+3287000		Uncertain significance: not specified	33,675,841(+)	NM_002224.4(ITPR3):c.3267G>A (p.Met1089Ile)	G/A	M1089I	missense variant
+3287001		Uncertain significance: not specified	33,685,711(+)	NM_002224.4(ITPR3):c.5551G>C (p.Gly1851Arg)	G/C	G1851R	missense variant
+3287002		Uncertain significance: not specified	33,673,702(+)	NM_002224.4(ITPR3):c.3040C>A (p.Pro1014Thr)	C/A	P1014T	missense variant
+3287004		Uncertain significance: not specified	33,676,925(+)	NM_002224.4(ITPR3):c.3440A>G (p.Lys1147Arg)	A/G	K1147R	missense variant
+3287005		Uncertain significance: not specified	33,687,283(+)	NM_002224.4(ITPR3):c.6133A>G (p.Ser2045Gly)	A/G	S2045G	missense variant
+3287006		Uncertain significance: not specified	33,673,593(+)	NM_002224.4(ITPR3):c.2931C>A (p.Phe977Leu)	C/A	F977L	missense variant
+3287007		Uncertain significance: not specified	33,667,938(+)	NM_002224.4(ITPR3):c.1860C>A (p.Ser620Arg)	C/A	S620R	missense variant
+3287008		Uncertain significance: not specified	33,689,355(+)	NM_002224.4(ITPR3):c.6812G>A (p.Arg2271His)	G/A	R2271H	missense variant
+3287009		Uncertain significance: not specified	33,693,703(+)	NM_002224.4(ITPR3):c.7783A>C (p.Lys2595Gln)	A/C	K2595Q	missense variant
+3287010		Uncertain significance: not specified	33,693,578(+)	NM_002224.4(ITPR3):c.7658T>C (p.Val2553Ala)	T/C	V2553A	missense variant
+3287011		Uncertain significance: not specified	33,679,975(+)	NM_002224.4(ITPR3):c.4066G>A (p.Val1356Met)	G/A	V1356M	missense variant
+3287015		Uncertain significance: not specified	33,680,670(+)	NM_002224.4(ITPR3):c.4466C>A (p.Thr1489Asn)	C/A	T1489N	missense variant
+3287016		Uncertain significance: not specified	33,665,185(+)	NM_002224.4(ITPR3):c.1381G>A (p.Glu461Lys)	G/A	E461K	missense variant
+3287017		Uncertain significance: not specified	33,667,236(+)	NM_002224.4(ITPR3):c.1659C>A (p.Phe553Leu)	C/A	F553L	missense variant
+3287018		Uncertain significance: not specified	33,684,464(+)	NM_002224.4(ITPR3):c.5045G>A (p.Arg1682Gln)	G/A	R1682Q	missense variant
+3287019		Uncertain significance: not specified	33,689,319(+)	NM_002224.4(ITPR3):c.6776A>G (p.Tyr2259Cys)	A/G	Y2259C	missense variant
+3287020		Uncertain significance: not specified	33,667,177(+)	NM_002224.4(ITPR3):c.1600C>T (p.Pro534Ser)	C/T	P534S	missense variant
+3341679		Uncertain significance: not provided	33,679,914(+)	NM_002224.4(ITPR3):c.4005C>A (p.Phe1335Leu)	C/A	F1335L	missense variant
+3347133		Uncertain significance: ITPR3-related disorder	33,672,055(+)	NM_002224.4(ITPR3):c.2755G>T (p.Gly919Cys)	G/T	G919C	missense variant
+3351457		Uncertain significance: ITPR3-related disorder	33,686,447(+)	NM_002224.4(ITPR3):c.5907C>G (p.Ile1969Met)	C/G	I1969M	missense variant
+3354652		Uncertain significance: ITPR3-related disorder	33,658,009(+)	NM_002224.4(ITPR3):c.360T>G (p.Ser120Arg)	T/G	S120R	missense variant
+3360604		Uncertain significance: Type 1 Diabetes Mellitus ; Charcot-Marie-Tooth Disease, Demyelinating, Type 1J ; not provided	33,686,443(+)	NM_002224.4(ITPR3):c.5903A>T (p.Asp1968Val)	A/T	D1968V	missense variant
+3363418		Uncertain significance: not provided	33,688,751(+)	NM_002224.4(ITPR3):c.6664T>C (p.Phe2222Leu)	T/C	F2222L	missense variant
+3376007		Uncertain significance: not provided	33,662,663(+)	NM_002224.4(ITPR3):c.847T>C (p.Trp283Arg)	T/C	W283R	missense variant
+3387938		Uncertain significance: not provided	33,667,818(+)	NM_002224.4(ITPR3):c.1740G>A (p.Met580Ile)	G/A	M580I	missense variant
+3389654		Uncertain significance: not provided	33,658,703(+)	NM_002224.4(ITPR3):c.403G>T (p.Val135Leu)	G/T	V135L	missense variant
+3390122		Uncertain significance: not provided	33,688,690(+)	NM_002224.4(ITPR3):c.6603G>A (p.Met2201Ile)	G/A	M2201I	missense variant
+3530907		Uncertain significance: not specified	33,679,966(+)	NM_002224.4(ITPR3):c.4057C>T (p.Arg1353Cys)	C/T	R1353C	missense variant
+3530908		Uncertain significance: not specified	33,687,048(+)	NM_002224.4(ITPR3):c.6019C>T (p.Arg2007Trp)	C/T	R2007W	missense variant
+3530910		Uncertain significance: not specified	33,659,027(+)	NM_002224.4(ITPR3):c.535G>A (p.Val179Met)	G/A	V179M	missense variant
+3530911		Uncertain significance: not specified	33,686,127(+)	NM_002224.4(ITPR3):c.5742G>C (p.Met1914Ile)	G/C	M1914I	missense variant
+3530912		Uncertain significance: not specified	33,680,559(+)	NM_002224.4(ITPR3):c.4355G>A (p.Cys1452Tyr)	G/A	C1452Y	missense variant
+3530913		Uncertain significance: not specified	33,677,015(+)	NM_002224.4(ITPR3):c.3448C>T (p.Arg1150Cys)	C/T	R1150C	missense variant
+3530914		Uncertain significance: not specified	33,685,708(+)	NM_002224.4(ITPR3):c.5548C>T (p.Arg1850Trp)	C/T	R1850W	missense variant
+3530915		Uncertain significance: not specified	33,683,216(+)	NM_002224.4(ITPR3):c.4607G>A (p.Arg1536Gln)	G/A	R1536Q	missense variant
+3530916		Uncertain significance: not specified	33,687,541(+)	NM_002224.4(ITPR3):c.6241G>A (p.Glu2081Lys)	G/A	E2081K	missense variant
+3530917		Uncertain significance: not specified	33,685,518(+)	NM_002224.4(ITPR3):c.5467G>A (p.Asp1823Asn)	G/A	D1823N	missense variant
+3530918		Uncertain significance: not specified	33,689,276(+)	NM_002224.4(ITPR3):c.6733A>T (p.Ile2245Phe)	A/T	I2245F	missense variant
+3530920		Uncertain significance: not specified	33,680,579(+)	NM_002224.4(ITPR3):c.4375G>A (p.Val1459Met)	G/A	V1459M	missense variant
+3530921		Uncertain significance: not specified	33,669,083(+)	NM_002224.4(ITPR3):c.2116A>G (p.Lys706Glu)	A/G	K706E	missense variant
+3530922		Uncertain significance: not specified	33,658,679(+)	NM_002224.4(ITPR3):c.379A>T (p.Met127Leu)	A/T	M127L	missense variant
+3530923		Uncertain significance: not specified	33,663,760(+)	NM_002224.4(ITPR3):c.1028G>A (p.Arg343His)	G/A	R343H	missense variant
+3530924		Uncertain significance: not specified	33,658,774(+)	NM_002224.4(ITPR3):c.474G>C (p.Glu158Asp)	G/C	E158D	missense variant
+3530925		Uncertain significance: not specified	33,693,688(+)	NM_002224.4(ITPR3):c.7768G>A (p.Val2590Met)	G/A	V2590M	missense variant
+3530926		Uncertain significance: not specified	33,663,516(+)	NM_002224.4(ITPR3):c.971A>C (p.Lys324Thr)	A/C	K324T	missense variant
+3530927		Uncertain significance: not specified	33,664,875(+)	NM_002224.4(ITPR3):c.1154C>T (p.Ser385Leu)	C/T	S385L	missense variant
+3530928		Uncertain significance: not specified	33,675,828(+)	NM_002224.4(ITPR3):c.3254G>T (p.Arg1085Leu)	G/T	R1085L	missense variant
+3530929		Uncertain significance: not specified	33,658,812(+)	NM_002224.4(ITPR3):c.512G>A (p.Arg171Gln)	G/A	R171Q	missense variant
+3530931		Uncertain significance: not specified	33,684,896(+)	NM_002224.4(ITPR3):c.5260A>G (p.Ile1754Val)	A/G	I1754V	missense variant
+3530932		Uncertain significance: not specified	33,684,431(+)	NM_002224.4(ITPR3):c.5012A>T (p.Gln1671Leu)	A/T	Q1671L	missense variant
+3530933		Uncertain significance: not specified	33,684,634(+)	NM_002224.4(ITPR3):c.5083C>G (p.Leu1695Val)	C/G	L1695V	missense variant
+3530934		Uncertain significance: not specified	33,677,594(+)	NM_002224.4(ITPR3):c.3613G>T (p.Val1205Phe)	G/T	V1205F	missense variant
+3530935		Uncertain significance: not specified	33,665,916(+)	NM_002224.4(ITPR3):c.1491G>A (p.Met497Ile)	G/A	M497I	missense variant
+3530936		Uncertain significance: not specified	33,670,446(+)	NM_002224.4(ITPR3):c.2311T>C (p.Phe771Leu)	T/C	F771L	missense variant
+3530937		Uncertain significance: not specified	33,695,724(+)	NM_002224.4(ITPR3):c.7960C>T (p.Arg2654Trp)	C/T	R2654W	missense variant
+3530938		Uncertain significance: not specified	33,680,625(+)	NM_002224.4(ITPR3):c.4421A>G (p.Asp1474Gly)	A/G	D1474G	missense variant
+3530939		Uncertain significance: not specified	33,689,343(+)	NM_002224.4(ITPR3):c.6800C>T (p.Ala2267Val)	C/T	A2267V	missense variant
+3530940		Uncertain significance: not specified	33,682,555(+)	NM_002224.4(ITPR3):c.4508A>G (p.Gln1503Arg)	A/G	Q1503R	missense variant
+3530942		Uncertain significance: not specified	33,684,643(+)	NM_002224.4(ITPR3):c.5092C>T (p.Arg1698Trp)	C/T	R1698W	missense variant
+3664150		Uncertain significance: not provided	33,692,840(+)	NM_002224.4(ITPR3):c.7571G>A (p.Arg2524His)	G/A	R2524H	missense variant
+3697077		Uncertain significance: not provided	33,695,713(+)	NM_002224.4(ITPR3):c.7949T>C (p.Met2650Thr)	T/C	M2650T	missense variant
+3766319		Uncertain significance: not provided	33,665,126(+)	NM_002224.4(ITPR3):c.1322A>G (p.Asp441Gly)	A/G	D441G	missense variant
+3769754		Uncertain significance: not provided	33,688,251(+)	NM_002224.4(ITPR3):c.6388G>T (p.Asp2130Tyr)	G/T	D2130Y	missense variant
+3770715		Uncertain significance: not provided	33,685,681(+)	NM_002224.4(ITPR3):c.5521C>T (p.Arg1841Cys)	C/T	R1841C	missense variant
+3774216		Uncertain significance: not provided	33,662,588(+)	NM_002224.4(ITPR3):c.772A>G (p.Lys258Glu)	A/G	K258E	missense variant
+3776040		Uncertain significance: Charcot-Marie-Tooth Disease, Demyelinating, Type 1J	33,672,056(+)	NM_002224.4(ITPR3):c.2756G>T (p.Gly919Val)	G/T	G919V	missense variant
+3861906		Uncertain significance: not specified	33,678,653(+)	NM_002224.4(ITPR3):c.3786G>C (p.Glu1262Asp)	G/C	E1262D	missense variant
+3861907		Uncertain significance: not specified	33,671,216(+)	NM_002224.4(ITPR3):c.2638G>A (p.Glu880Lys)	G/A	E880K	missense variant
+3861908		Uncertain significance: not specified	33,671,217(+)	NM_002224.4(ITPR3):c.2639A>T (p.Glu880Val)	A/T	E880V	missense variant
+3861909		Uncertain significance: not specified	33,691,644(+)	NM_002224.4(ITPR3):c.7255G>A (p.Ala2419Thr)	G/A	A2419T	missense variant
+3861910		Uncertain significance: not specified	33,655,867(+)	NM_002224.4(ITPR3):c.262G>T (p.Val88Leu)	G/T	V88L	missense variant
+3861911		Uncertain significance: not specified	33,665,178(+)	NM_002224.4(ITPR3):c.1374A>T (p.Lys458Asn)	A/T	K458N	missense variant
+3861913		Uncertain significance: not specified	33,686,081(+)	NM_002224.4(ITPR3):c.5696C>A (p.Thr1899Asn)	C/A	T1899N	missense variant
+3861914		Uncertain significance: not specified	33,680,574(+)	NM_002224.4(ITPR3):c.4370A>G (p.Lys1457Arg)	A/G	K1457R	missense variant
+3861915		Uncertain significance: not specified	33,665,141(+)	NM_002224.4(ITPR3):c.1337A>G (p.Asn446Ser)	A/G	N446S	missense variant
+3861916		Uncertain significance: not specified	33,687,543(+)	NM_002224.4(ITPR3):c.6243G>C (p.Glu2081Asp)	G/C	E2081D	missense variant
+3861917		Uncertain significance: not specified	33,688,348(+)	NM_002224.4(ITPR3):c.6485A>G (p.Asp2162Gly)	A/G	D2162G	missense variant
+3861918		Uncertain significance: not specified	33,683,329(+)	NM_002224.4(ITPR3):c.4720C>T (p.Arg1574Trp)	C/T	R1574W	missense variant
+3861919		Uncertain significance: not specified	33,684,030(+)	NM_002224.4(ITPR3):c.4799C>T (p.Thr1600Ile)	C/T	T1600I	missense variant
+3861920		Uncertain significance: not specified	33,664,943(+)	NM_002224.4(ITPR3):c.1222G>A (p.Glu408Lys)	G/A	E408K	missense variant
+3861921		Uncertain significance: not specified	33,684,653(+)	NM_002224.4(ITPR3):c.5102C>T (p.Thr1701Ile)	C/T	T1701I	missense variant
+3861923		Uncertain significance: not specified	33,640,551(+)	NM_002224.4(ITPR3):c.157C>T (p.Arg53Cys)	C/T	R53C	missense variant
+3861924		Uncertain significance: not specified	33,678,780(+)	NM_002224.4(ITPR3):c.3913A>G (p.Thr1305Ala)	A/G	T1305A	missense variant
+3861925		Uncertain significance: not specified	33,664,961(+)	NM_002224.4(ITPR3):c.1240C>T (p.Arg414Trp)	C/T	R414W	missense variant
+3861926		Uncertain significance: not specified	33,670,498(+)	NM_002224.4(ITPR3):c.2363G>A (p.Arg788His)	G/A	R788H	missense variant
+3861927		Uncertain significance: not specified	33,658,800(+)	NM_002224.4(ITPR3):c.500T>G (p.Phe167Cys)	T/G	F167C	missense variant
+3861928		Uncertain significance: not specified	33,664,884(+)	NM_002224.4(ITPR3):c.1163G>A (p.Arg388Gln)	G/A	R388Q	missense variant
+3896885		Uncertain significance: not provided	33,675,755(+)	NM_002224.4(ITPR3):c.3181C>T (p.His1061Tyr)	C/T	H1061Y	missense variant
+3898785		Uncertain significance: not provided	33,659,070(+)	NM_002224.4(ITPR3):c.578C>A (p.Pro193His)	C/A	P193H	missense variant
+3900078		Uncertain significance: not provided	33,690,975(+)	NM_002224.4(ITPR3):c.7091G>A (p.Arg2364His)	G/A	R2364H	missense variant
+547000 5	rs139191409	Uncertain significance: not provided	33,680,606(+)	NM_002224.4(ITPR3):c.4402G>A (p.Val1468Met)	G/A	V1468M	missense variant
+709049 5	rs144737770	"Uncertain significance: not specified
+Likely benign: not provided"	33,685,684(+)	NM_002224.4(ITPR3):c.5524T>C (p.Tyr1842His)	T/C	Y1842H	missense variant
+2656499 5	rs41267659	Likely benign: not provided ; ITPR3-related disorder	33,684,849(+)	NM_002224.4(ITPR3):c.5213G>A (p.Cys1738Tyr)	G/A	C1738Y	missense variant
+3026215 5	rs760884468	Likely benign: not provided	33,685,720(+)	NM_002224.4(ITPR3):c.5560G>A (p.Val1854Met)	G/A	V1854M	missense variant
+3771396		Likely benign: not provided	33,683,381(+)	NM_002224.4(ITPR3):c.4772T>C (p.Ile1591Thr)	T/C	I1591T	missense variant
+716027 5	rs59525809	"Likely benign: not provided
+Benign: ITPR3-related disorder"	33,690,049(+)	NM_002224.4(ITPR3):c.6883G>A (p.Val2295Met)	G/A	V2295M	missense variant
+716890 5	rs147513071	Likely benign: not provided	33,677,081(+)	NM_002224.4(ITPR3):c.3514G>A (p.Val1172Ile)	G/A	V1172I	missense variant
+717724 5	rs2229641	"Likely benign: ITPR3-related disorder
+Benign: not provided"	33,691,076(+)	NM_002224.4(ITPR3):c.7192G>C (p.Glu2398Gln)	G/C	E2398Q	missense variant
+722942 5	rs146844329	Likely benign: not provided	33,686,194(+)	NM_002224.4(ITPR3):c.5809G>A (p.Val1937Ile)	G/A	V1937I	missense variant
+723915 5	rs200701659	Likely benign: not provided	33,663,742(+)	NM_002224.4(ITPR3):c.1010C>T (p.Ala337Val)	C/T	A337V	missense variant
+725316 5	rs147873398	Likely benign: not provided ; ITPR3-related disorder	33,679,923(+)	NM_002224.4(ITPR3):c.4014T>A (p.Asp1338Glu)	T/A	D1338E	missense variant
+736839 5	rs141508541	Likely benign: not provided	33,683,344(+)	NM_002224.4(ITPR3):c.4735G>A (p.Val1579Ile)	G/A	V1579I	missense variant
+774180 5	rs2229633	"Benign/Likely benign: not provided
+Benign: ITPR3-related disorder"	33,670,361(+)	NM_002224.4(ITPR3):c.2226C>A (p.Asp742Glu)	C/A	D742E	missense variant
+1251401 5	rs2229642	Benign: not provided ; ITPR3-related disorder	33,691,695(+)	NM_002224.4(ITPR3):c.7306C>G (p.Leu2436Val)	C/G	L2436V	missense variant
+1691097 5	rs2491866364	"Pathogenic: Global developmental delay ; Seizure ; Respiratory distress ; Abnormal facial shape ; Intellectual disability ; Severe muscular hypotonia
+Uncertain significance: KIF5B-related developmental disorder"	32,028,543(-)	NM_004521.3(KIF5B):c.1610T>C (p.Leu537Pro)	A/G	L537P	missense variant
+1691098 5	rs2491871660	Pathogenic: Feeding difficulties ; Intellectual disability ; Severe muscular hypotonia ; Fatigable weakness of swallowing muscles	32,031,161(-)	NM_004521.3(KIF5B):c.1493T>C (p.Leu498Pro)	A/G	L498P	missense variant
+986389 5	rs1841455410	"Pathogenic: Skeletal Muscle Disease ; Kearns-Sayre Syndrome ; Dilated Cardiomyopathy ; Multiple joint contractures ; Skeletal myopathy
+Likely pathogenic: Hypertrophic Cardiomyopathy"	32,035,939(-)	NM_004521.3(KIF5B):c.762CAA[1] (p.Asn255del)	CTTG/C	N255del	inframe_deletion
+242891 5	rs1114167297	Likely pathogenic: Attention Deficit-Hyperactivity Disorder ; Global developmental delay ; Seizure ; Hypoplasia of the corpus callosum ; Brain atrophy	32,019,912(-)	NM_004521.3(KIF5B):c.2252A>G (p.His751Arg)	T/C	H751R	missense variant
+3370124		Likely pathogenic: not provided	32,035,651(-)	NM_004521.3(KIF5B):c.833G>A (p.Arg278Gln)	C/T	R278Q	missense variant
+1966889 5	rs2491871828	Uncertain significance: not provided	32,031,213(-)	NM_004521.3(KIF5B):c.1441A>C (p.Asn481His)	T/G	N481H	missense variant
+2222086 5	rs972811968	Uncertain significance: not specified	32,021,034(-)	NM_004521.3(KIF5B):c.2192C>T (p.Thr731Ile)	G/A	T731I	missense variant
+2292218 5	rs183385693	Uncertain significance: not specified	32,021,118(-)	NM_004521.3(KIF5B):c.2108A>G (p.Gln703Arg)	T/C	Q703R	missense variant
+2292886 5	rs1300170658	Uncertain significance: not specified	32,022,996(-)	NM_004521.3(KIF5B):c.1766T>C (p.Val589Ala)	A/G	V589A	missense variant
+2318663 5	rs750217497	Uncertain significance: not specified	32,015,608(-)	NM_004521.3(KIF5B):c.2813G>A (p.Ser938Asn)	C/T	S938N	missense variant
+2335049 5	rs375091697	Uncertain significance: not specified	32,028,556(-)	NM_004521.3(KIF5B):c.1597A>C (p.Ile533Leu)	T/G	I533L	missense variant
+2335993 5	rs1467010566	Uncertain significance: not specified	32,021,114(-)	NM_004521.3(KIF5B):c.2112G>T (p.Gln704His)	C/A	Q704H	missense variant
+2347291 5	rs772124743	Uncertain significance: not specified	32,015,558(-)	NM_004521.3(KIF5B):c.2863G>A (p.Val955Met)	C/T	V955M	missense variant
+2366908 5	rs202228136	Uncertain significance: not specified	32,032,728(-)	NM_004521.3(KIF5B):c.1352C>T (p.Thr451Met)	G/A	T451M	missense variant
+2483200 5	rs990213101	Uncertain significance: not specified	32,048,522(-)	NM_004521.3(KIF5B):c.156C>G (p.Phe52Leu)	G/C	F52L	missense variant
+2537735 5	rs1253924674	Uncertain significance: not specified	32,035,592(-)	NM_004521.3(KIF5B):c.892A>G (p.Ile298Val)	T/C	I298V	missense variant
+2543190 5	rs1190238646	Uncertain significance: not specified	32,021,058(-)	NM_004521.3(KIF5B):c.2168T>C (p.Val723Ala)	A/G	V723A	missense variant
+2546272 5	rs201746852	Uncertain significance: not specified	32,023,018(-)	NM_004521.3(KIF5B):c.1744A>G (p.Met582Val)	T/C	M582V	missense variant
+2549079 5	rs1237212656	Uncertain significance: not specified	32,028,564(-)	NM_004521.3(KIF5B):c.1589T>C (p.Leu530Ser)	A/G	L530S	missense variant
+2554977 5	rs370666912	Uncertain significance: not specified	32,028,499(-)	NM_004521.3(KIF5B):c.1654G>T (p.Ala552Ser)	C/A	A552S	missense variant
+2580234 5	rs2491893358	Uncertain significance: KIF5B-related osteogenesis imperfecta syndrome ; not provided	32,040,412(-)	NM_004521.3(KIF5B):c.260C>T (p.Thr87Ile)	G/A	T87I	missense variant
+2611322 5	rs2491882466	Uncertain significance: not specified	32,035,619(-)	NM_004521.3(KIF5B):c.865T>G (p.Ser289Ala)	A/C	S289A	missense variant
+2611942 5	rs769666829	Uncertain significance: not specified	32,022,229(-)	NM_004521.3(KIF5B):c.1943A>C (p.Glu648Ala)	T/G	E648A	missense variant
+2612153 5	rs147256984	Uncertain significance: not specified	32,040,429(-)	NM_004521.3(KIF5B):c.243A>G (p.Ile81Met)	T/C	I81M	missense variant
+3114948 5	rs761633688	Uncertain significance: not specified	32,033,951(-)	NM_004521.3(KIF5B):c.1199A>G (p.Asn400Ser)	T/C	N400S	missense variant
+3114949 5	rs532228096	Uncertain significance: not specified	32,033,904(-)	NM_004521.3(KIF5B):c.1246G>A (p.Ala416Thr)	C/T	A416T	missense variant
+3114950 5	rs1357273242	Uncertain significance: not specified	32,028,538(-)	NM_004521.3(KIF5B):c.1615A>C (p.Lys539Gln)	T/G	K539Q	missense variant
+3114951 5	rs199670106	Uncertain significance: not specified	32,019,867(-)	NM_004521.3(KIF5B):c.2297A>G (p.His766Arg)	T/C	H766R	missense variant
+3114952 5	rs746419991	Uncertain significance: not specified	32,018,099(-)	NM_004521.3(KIF5B):c.2497T>A (p.Ser833Thr)	A/T	S833T	missense variant
+3114953 5	rs200746362	Uncertain significance: not specified	32,017,352(-)	NM_004521.3(KIF5B):c.2552G>T (p.Arg851Leu)	C/A	R851L	missense variant
+3114954 5	rs2491822941	Uncertain significance: not specified	32,015,560(-)	NM_004521.3(KIF5B):c.2861C>T (p.Ala954Val)	G/A	A954V	missense variant
+3114955 5	rs2491926908	Uncertain significance: not specified	32,055,922(-)	NM_004521.3(KIF5B):c.52C>T (p.Leu18Phe)	G/A	L18F	missense variant
+3288652		Uncertain significance: not specified	32,031,218(-)	NM_004521.3(KIF5B):c.1436C>T (p.Ala479Val)	G/A	A479V	missense variant
+3288653		Uncertain significance: not specified	32,032,741(-)	NM_004521.3(KIF5B):c.1339G>C (p.Glu447Gln)	C/G	E447Q	missense variant
+3342614		Uncertain significance: not provided	32,035,951(-)	NM_004521.3(KIF5B):c.755A>C (p.Lys252Thr)	T/G	K252T	missense variant
+3342647		Uncertain significance: not provided	32,022,933(-)	NM_004521.3(KIF5B):c.1829A>G (p.Gln610Arg)	T/C	Q610R	missense variant
+3342671		Uncertain significance: not provided	32,017,339(-)	NM_004521.3(KIF5B):c.2565T>A (p.Asp855Glu)	A/T	D855E	missense variant
+3343227		Uncertain significance: not provided	32,022,139(-)	NM_004521.3(KIF5B):c.2032+1delinsTT	C/AA		splice donor variant
+3359832		Uncertain significance: not provided	32,033,890(-)	NM_004521.3(KIF5B):c.1260G>C (p.Lys420Asn)	C/G	K420N	missense variant
+3360453		Uncertain significance: not provided	32,040,416(-)	NM_004521.3(KIF5B):c.256C>A (p.Gln86Lys)	G/T	Q86K	missense variant
+3363932		Uncertain significance: not provided	32,028,464(-)	NM_004521.3(KIF5B):c.1669_1689del (p.Ser557_Ala563del)	CTGCAAGG...		inframe deletion
+3365624		Uncertain significance: not provided	32,021,131(-)	NM_004521.3(KIF5B):c.2095C>T (p.Gln699Ter)	G/A	Q699*	nonsense
+3372116		Uncertain significance: not provided	32,015,539(-)	NM_004521.3(KIF5B):c.2882A>G (p.Lys961Arg)	T/C	K961R	missense variant
+3377830		Uncertain significance: not provided	32,018,069(-)	NM_004521.3(KIF5B):c.2527A>G (p.Thr843Ala)	T/C	T843A	missense variant
+3383888		Uncertain significance: not provided	32,023,011(-)	NM_004521.3(KIF5B):c.1751A>T (p.Asp584Val)	T/A	D584V	missense variant
+3384298		Uncertain significance: not provided	32,034,780(-)	NM_004521.3(KIF5B):c.1021A>G (p.Lys341Glu)	T/C	K341E	missense variant
+3534472		Uncertain significance: not specified	32,034,828(-)	NM_004521.3(KIF5B):c.973A>G (p.Ile325Val)	T/C	I325V	missense variant
+3534474		Uncertain significance: not specified	32,048,515(-)	NM_004521.3(KIF5B):c.163A>C (p.Ser55Arg)	T/G	S55R	missense variant
+3534475		Uncertain significance: not specified	32,017,293(-)	NM_004521.3(KIF5B):c.2611G>A (p.Ala871Thr)	C/T	A871T	missense variant
+3534476		Uncertain significance: not specified	32,033,933(-)	NM_004521.3(KIF5B):c.1217C>T (p.Ala406Val)	G/A	A406V	missense variant
+3534477		Uncertain significance: not specified	32,017,183(-)	NM_004521.3(KIF5B):c.2721G>C (p.Arg907Ser)	C/G	R907S	missense variant
+3572575		Uncertain significance: not provided	32,018,051(-)	NM_004521.3(KIF5B):c.2544+1G>T	C/A		splice donor variant
+3602595		Uncertain significance: KIF5B-related disease	32,037,547(-)	NM_004521.3(KIF5B):c.559A>G (p.Lys187Glu)	T/C	K187E	missense variant
+3767953		Uncertain significance: KIF5B-related skeletal dysplasia	32,040,399(-)	NM_004521.3(KIF5B):c.273G>T (p.Lys91Asn)	C/A	K91N	missense variant
+3775338		Uncertain significance: KIF5B-related developmental disorder	32,040,392(-)	NM_004521.3(KIF5B):c.280A>G (p.Thr94Ala)	T/C	T94A	missense variant
+3781279		Uncertain significance: not provided	32,035,952(-)	NM_004521.3(KIF5B):c.754A>G (p.Lys252Glu)	T/C	K252E	missense variant
+3864371		Uncertain significance: not specified	32,021,087(-)	NM_004521.3(KIF5B):c.2139A>C (p.Gln713His)	T/G	Q713H	missense variant
+3864372		Uncertain significance: not specified	32,048,497(-)	NM_004521.3(KIF5B):c.181G>A (p.Val61Met)	C/T	V61M	missense variant
+3864373		Uncertain significance: not specified	32,034,744(-)	NM_004521.3(KIF5B):c.1057A>G (p.Ile353Val)	T/C	I353V	missense variant
+3864374		Uncertain significance: not specified	32,021,261(-)	NM_004521.3(KIF5B):c.2059C>T (p.His687Tyr)	G/A	H687Y	missense variant
+3864375		Uncertain significance: not specified	32,028,466(-)	NM_004521.3(KIF5B):c.1687G>A (p.Ala563Thr)	C/T	A563T	missense variant
+3864376		Uncertain significance: not specified	32,019,927(-)	NM_004521.3(KIF5B):c.2237G>A (p.Arg746His)	C/T	R746H	missense variant
+3864377		Uncertain significance: not specified	32,032,713(-)	NM_004521.3(KIF5B):c.1367A>G (p.Gln456Arg)	T/C	Q456R	missense variant
+3864378		Uncertain significance: not specified	32,031,201(-)	NM_004521.3(KIF5B):c.1453A>G (p.Lys485Glu)	T/C	K485E	missense variant
+3864379		Uncertain significance: not specified	32,028,555(-)	NM_004521.3(KIF5B):c.1598T>C (p.Ile533Thr)	A/G	I533T	missense variant
+3864380		Uncertain significance: not specified	32,021,260(-)	NM_004521.3(KIF5B):c.2060A>G (p.His687Arg)	T/C	H687R	missense variant
+3897101		Uncertain significance: not provided	32,022,224(-)	NM_004521.3(KIF5B):c.1948C>T (p.Leu650Phe)	G/A	L650F	missense variant
+3900082		Uncertain significance: not provided	32,028,505(-)	NM_004521.3(KIF5B):c.1648C>T (p.Arg550Ter)	G/A	R550*	nonsense
+2295773 5	rs377656602	Likely benign: not specified	32,033,934(-)	NM_004521.3(KIF5B):c.1216G>A (p.Ala406Thr)	C/T	A406T	missense variant
+2640398 5	rs35441986	Likely benign: not provided	32,031,074(-)	NM_004521.3(KIF5B):c.1580C>T (p.Ser527Leu)	G/A	S527L	missense variant
+3534473		Likely benign: not specified	32,033,921(-)	NM_004521.3(KIF5B):c.1229T>C (p.Ile410Thr)	A/G	I410T	missense variant

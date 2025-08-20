@@ -66,8 +66,8 @@ class LOFAnalyzer:
         orig_props = self.aa_properties.get(original_aa, self._default_props())
         new_props = self.aa_properties.get(new_aa, self._default_props())
         
-        # Analyze different LOF mechanisms
-        stability_impact = self._assess_stability_impact(orig_props, new_props)
+        # Analyze different LOF mechanisms (now with Grantham distance!)
+        stability_impact = self._assess_stability_impact(orig_props, new_props, mutation)
         conservation_impact = self._assess_conservation_impact(orig_props, new_props)
         structural_impact = self._assess_structural_impact(orig_props, new_props, position, len(sequence))
         functional_impact = self._assess_functional_impact(mutation, sequence)
@@ -79,16 +79,27 @@ class LOFAnalyzer:
                 uniprot_id, sequence, position
             )
 
-        # Calculate overall LOF score with smart multiplier
+        # Get conservation multiplier from kwargs
+        conservation_multiplier = kwargs.get('conservation_multiplier', 1.0)
+
+        # Calculate overall LOF score with ALL multipliers
         base_lof_score = self._calculate_lof_score(
             stability_impact, conservation_impact, structural_impact, functional_impact
         )
-        lof_score = min(base_lof_score * smart_multiplier, 1.0)
+
+        # Apply both conservation and smart multipliers
+        total_multiplier = smart_multiplier * conservation_multiplier
+        lof_score = base_lof_score * total_multiplier
+
+        # Don't cap at 1.0 - let it go higher like REVEL scores
+        # lof_score = min(base_lof_score * total_multiplier, 1.0)
         
         return {
             'lof_score': lof_score,
             'base_lof_score': base_lof_score,
             'smart_multiplier': smart_multiplier,
+            'conservation_multiplier': conservation_multiplier,
+            'total_multiplier': total_multiplier,
             'stability_impact': stability_impact,
             'conservation_impact': conservation_impact,
             'structural_impact': structural_impact,
@@ -125,28 +136,62 @@ class LOFAnalyzer:
             'confidence': 0.0
         }
     
-    def _assess_stability_impact(self, orig_props: Dict, new_props: Dict) -> float:
-        """Assess impact on protein stability"""
+    def _assess_stability_impact(self, orig_props: Dict, new_props: Dict, mutation: str = None) -> float:
+        """Assess impact on protein stability using REAL amino acid science!"""
+
+        # If we have mutation string, use Grantham distance
+        if mutation:
+            parsed = self._parse_mutation(mutation)
+            if parsed:
+                orig_aa = parsed['original_aa']
+                new_aa = parsed['new_aa']
+
+                # Use Grantham distance for scientific accuracy!
+                grantham_distance = self._get_grantham_distance(orig_aa, new_aa)
+
+                # Convert Grantham distance to stability impact
+                if grantham_distance >= 150:
+                    base_score = 0.8  # Very severe change
+                elif grantham_distance >= 100:
+                    base_score = 0.6  # Severe change
+                elif grantham_distance >= 50:
+                    base_score = 0.4  # Moderate change
+                elif grantham_distance >= 20:
+                    base_score = 0.2  # Mild change
+                else:
+                    base_score = 0.1  # Very conservative change
+
+                # Add special case modifiers
+                if 'P' in mutation:  # Proline introduction/removal
+                    base_score += 0.2
+                if 'G' in mutation:  # Glycine flexibility
+                    base_score += 0.15
+                if 'C' in mutation:  # Cysteine disulfide bonds
+                    base_score += 0.25
+
+                return min(base_score, 1.0)
+
+        # Fallback to old method if no mutation string
         score = 0.0
-        
+
         # Size changes affect stability
         size_change = abs(new_props['size'] - orig_props['size'])
         if size_change > 2:
             score += 0.3
         elif size_change > 1:
             score += 0.1
-        
+
         # Charge changes affect stability
         charge_change = abs(new_props['charge'] - orig_props['charge'])
         if charge_change > 1:
             score += 0.4
         elif charge_change > 0.5:
             score += 0.2
-        
+
         # Hydrophobicity changes
         if orig_props['hydrophobic'] != new_props['hydrophobic']:
             score += 0.2
-        
+
         return min(score, 1.0)
     
     def _assess_conservation_impact(self, orig_props: Dict, new_props: Dict) -> float:
@@ -229,3 +274,29 @@ class LOFAnalyzer:
             confidence += 0.1
         
         return min(confidence, 0.9)
+
+    def _get_grantham_distance(self, aa1, aa2):
+        """Get Grantham distance between amino acids - REAL SCIENCE!"""
+        # Key Grantham distances for common substitutions
+        grantham_matrix = {
+            ('A', 'A'): 0, ('A', 'R'): 112, ('A', 'N'): 111, ('A', 'D'): 126, ('A', 'C'): 195,
+            ('A', 'Q'): 91, ('A', 'E'): 107, ('A', 'G'): 60, ('A', 'H'): 86, ('A', 'I'): 94,
+            ('A', 'L'): 96, ('A', 'K'): 106, ('A', 'M'): 84, ('A', 'F'): 113, ('A', 'P'): 27,
+            ('A', 'S'): 99, ('A', 'T'): 58, ('A', 'W'): 148, ('A', 'Y'): 112, ('A', 'V'): 64,
+
+            ('R', 'R'): 0, ('R', 'N'): 86, ('R', 'D'): 96, ('R', 'C'): 180, ('R', 'Q'): 43,
+            ('R', 'E'): 54, ('R', 'G'): 125, ('R', 'H'): 29, ('R', 'I'): 97, ('R', 'L'): 102,
+            ('R', 'K'): 26, ('R', 'M'): 91, ('R', 'F'): 97, ('R', 'P'): 103, ('R', 'S'): 110,
+            ('R', 'T'): 71, ('R', 'W'): 101, ('R', 'Y'): 77, ('R', 'V'): 96,
+
+            ('T', 'M'): 81,  # T1424M - moderate severity
+            ('V', 'I'): 29,  # V1172I - very conservative
+            ('T', 'T'): 0, ('M', 'M'): 0, ('V', 'V'): 0, ('I', 'I'): 0,  # Identity
+        }
+
+        # Try both orientations
+        distance = grantham_matrix.get((aa1, aa2))
+        if distance is None:
+            distance = grantham_matrix.get((aa2, aa1))
+
+        return distance if distance is not None else 50  # Default moderate distance
