@@ -105,3 +105,11 @@ desktop.ini
 !*.py
 !requirements.txt
 !setup.py
+
+
+# ===== ADDITIONAL SECRETS AND LOCAL ENVS =====
+nova_consciousness.env
+*.env
+nova_consciousness_env/
+mcp_consciousness_env/
+bees/.venv/
