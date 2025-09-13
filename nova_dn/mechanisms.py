@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Dict, List, Tuple
 from .amino_acid_props import delta
 from . import motifs
+from .stoichiometry import compute_interface_amp
 
 
 def _w(ctx: Dict | None, key: str, default: float) -> float:
@@ -47,30 +48,17 @@ def score_interface_poisoning(seq: str, pos1: int, ref: str, alt: str, context: 
     for f in feats:
         score += f["weight"] * (f["value"] if isinstance(f["value"], (int, float)) else 1.0)
 
-    # Stoichiometry-aware amplification (optional)
-    # Accepts ctx["stoichiometry"] if provided; otherwise uses small gene/UniProt overrides
-    k = int(float(ctx.get("stoichiometry", 0) or 0))
-    if not k:
-        gene = (ctx.get("gene_symbol") or "").upper()
-        uniprot = (ctx.get("uniprot_id") or "").upper()
-        gene_overrides = {"TP53": 4, "HBB": 4, "ATP5F1A": 6, "INS": 2}
-        uniprot_overrides = {"P04637": 4, "P68871": 4, "P25705": 6, "P01308": 2}
-        k = gene_overrides.get(gene) or uniprot_overrides.get(uniprot) or 0
-
-    amp_map = {2: 2.0, 3: 3.5, 4: 6.0, 6: 12.0}
-    if k == 1:
-        mono_damp = float(ctx.get("_mono_damp", 0.5))
-        feats.append({"feature": "monomer_damp", "value": mono_damp, "weight": -abs(1 - mono_damp)})
-        score *= mono_damp
-    elif k in amp_map:
-        amp = float(ctx.get("_stoich_amp_override", amp_map[k]))
-        feats.append({"feature": f"stoichiometry_{k}x", "value": amp, "weight": abs(amp)})
+    # Stoichiometry-aware amplification via provider (no per-gene hardcoding)
+    amp, amp_feats, amp_note = compute_interface_amp(seq, ctx)
+    if amp != 1.0:
+        for af in amp_feats:
+            feats.append({"feature": af.get("feature","amp"), "value": af.get("value",1), "weight": af.get("weight",0.0)})
         score *= amp
 
-    # Clamp and explanation
-    score = max(0.0, min(1.0, score))
+    # Clamp and explanation (TEMPORARILY UNCAPPED FOR THRESHOLD TESTING)
+    score = max(0.0, score)  # Remove min(1.0, score) cap
     one = " + ".join(_top_features(feats)) or "mild interface risk"
-    note = f"; k={k}" if k else ""
+    note = f"; {amp_note}" if amp_note else ""
     return score, feats, f"interface poisoning due to {one}{note}"
 
 
@@ -101,7 +89,7 @@ def score_active_site_jamming(seq: str, pos1: int, ref: str, alt: str, context: 
     score = 0.0
     for f in feats:
         score += f["weight"] * (f["value"] if isinstance(f["value"], (int, float)) else 1.0)
-    score = max(0.0, min(1.0, score))
+    score = max(0.0, score)  # UNCAPPED FOR TESTING
     one = " + ".join(_top_features(feats)) or "mild active-site risk"
     return score, feats, f"active-site jamming via {one}"
 
@@ -125,7 +113,7 @@ def score_structural_lattice_disruption(seq: str, pos1: int, ref: str, alt: str,
     score = 0.0
     for f in feats:
         score += f["weight"] * (f["value"] if isinstance(f["value"], (int, float)) else 1.0)
-    score = max(0.0, min(1.0, score))
+    score = max(0.0, score)  # UNCAPPED FOR TESTING
     one = " + ".join(_top_features(feats)) or "mild lattice risk"
     return score, feats, f"lattice disruption via {one}"
 
@@ -153,7 +141,7 @@ def score_trafficking_maturation(seq: str, pos1: int, ref: str, alt: str, contex
     score = 0.0
     for f in feats:
         score += f["weight"] * (f["value"] if isinstance(f["value"], (int, float)) else 1.0)
-    score = max(0.0, min(1.0, score))
+    score = max(0.0, score)  # UNCAPPED FOR TESTING
     one = " + ".join(_top_features(feats)) or "mild trafficking risk"
     return score, feats, f"trafficking/maturation mischief via {one}"
 
